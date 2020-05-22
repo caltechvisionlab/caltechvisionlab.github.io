@@ -1,8 +1,7 @@
 - name: Sara Beery
   photo: beery_sara.jpg
   info: PhD Student
-  number_educ: 1
-  education1: test
+  number_educ: 0
 
 - name: Jianfeng (Jacky) Ge
   photo: Jacky.jpg
