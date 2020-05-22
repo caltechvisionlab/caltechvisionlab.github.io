@@ -3,67 +3,52 @@
   info: PhD Student
   number_educ: 0
 
-- name: Jianfeng (Jacky) Ge
-  photo: Jacky.jpg
-  info: Postdoc, started Oct 2019
-  number_educ: 3
-  education1: Postdoc with <a href="http://hoffman.physics.harvard.edu">Jenny Hoffman</a>, Harvard University
-  education2: Ph.D. with <a href="https://www.physics.sjtu.edu.cn/en/people/1/jfJia">Jinfeng Jia</a>, Shanghai Jiao Tong University
-  education3: B.S. East China University of Science and Technology
-
-- name: Koen M Bastiaans
-  photo: Koen.jpg
-  info: PhD Student, started Sep 2015
-  number_educ: 1
-  education1: Master Leiden University with Milan Allan
-
-- name: Damianos Chatzopoulos
-  photo: Damianos.jpg
-  info: PhD Student, started December 2017
-  number_educ: 2
-  education1: Bachelor National and Kapodistrian University of Athens with D Syvridis
-  education2: Master TU Delft with <a href="http://vanderzantlab.tudelft.nl/">Herre van der Zant</a>
-  education3:
-
-- name: Willem Tromp
-  photo: website_pic_willem.jpg
-  info: PhD Student, started September 2018
-  number_educ: 1
-  education1: Master Leiden University with Felix Baumberger, Milan Allan
-  education2:
-  education3:
-  education4:
-
-- name: Tjerk Benschop
-  photo: tjeruk.jpg
-  info: PhD Student, started November 2018
-  number_educ: 2
-  education1: Master Leiden University with Milan Allan
-  education2: Casimir PhD grant
-  education3:
-  education4:
-
-- name: Kees van Oosten
-  photo: DSC_1032.JPG
-  info: Fine mechanical engineer associated with the FMD working in our group
-  number_educ: 2
-  education1: Leidse instrumentmakers School
-  education2: Associate degree Mechanical Engineering, Hogeschool Arnhem Nijmegen
-
-- name: Freek Groenewoud
-  photo: Freek.jpg
-  info: Fine mechanical engineer associated with the FMD working in our group
-  number_educ: 2
-  education1: Leidse Instrumentmaker School
-  education2: Mechanical Engineer , Hogeschool  Delft
-  education3:
-  education4:
-
-- name: "This could be you !"
-  photo: rock.jpg
-  info: See <a href="http://www.allanlab.org/vacancies">openings</a> for more info
+- name: Elijah Cole
+  photo: cole_elijah.jpg
+  info: PhD Student
   number_educ: 0
-  education1:
-  education2:
-  education3:
-  education4:
+
+- name: Mason McGill
+  photo: mcgill_mason.jpg
+  info: PhD Student
+  number_educ: 0
+
+- name: Joe Marino
+  photo: marino_joe.jpg
+  info: PhD Student
+  number_educ: 0
+
+- name: Caroline Murphy
+  photo: murphy_caroline.jpg
+  info: Group Administrator
+  number_educ: 0
+
+- name: Neehar Kondapaneni
+  photo: kondapaneni_neehar.jpg
+  info: PhD Student
+  number_educ: 0
+
+- name: Matteo Ronchi
+  photo: ronchi_matteo.jpg
+  info: PhD Student
+  number_educ: 0
+
+- name: Serim Ryou
+  photo: ryou_serim.jpg
+  info: PhD Student
+  number_educ: 0
+
+- name: Jennifer Sun
+  photo: sun_jennifer.jpg
+  info: PhD Student
+  number_educ: 0
+
+- name: Tony Zhang
+  photo: zhang_tony.jpg
+  info: PhD Student
+  number_educ: 0
+
+- name: Pietro Perona
+  photo: perona_pietro.jpg
+  info: Principal Investigator
+  number_educ: 0
