@@ -1,7 +1,7 @@
 ---
-title: "Allan Lab - Openings"
+title: "Perona Lab - Openings"
 layout: textlay
-excerpt: "Openings"
+excerpt: "Perona Lab -- Openings"
 sitemap: false
 permalink: /openings/
 ---
