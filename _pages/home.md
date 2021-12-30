@@ -1,7 +1,7 @@
 ---
-title: "Caltech Vision Lab - Home"
+title: "Perona Lab - Home"
 layout: homelay
-excerpt: "Caltech Vision Lab"
+excerpt: "Perona Lab"
 sitemap: false
 permalink: /
 ---
