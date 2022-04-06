@@ -18,5 +18,6 @@ As of April 2022, our current status is as follows:
 ## Download Links
 * [Caltech 101](https://data.caltech.edu/records/20086)
 * [Caltech 256](https://data.caltech.edu/records/20087)
-* [Caltech Cars 2001](https://data.caltech.edu/records/20085)
 * [Caltech Cars 1999](https://data.caltech.edu/records/20084)
+* [Caltech Cars 2001](https://data.caltech.edu/records/20085)
+* [Caltech Motorcycles 2001](https://data.caltech.edu/records/20088)
