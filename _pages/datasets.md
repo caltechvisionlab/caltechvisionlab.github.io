@@ -23,3 +23,4 @@ As of April 2022, our current status is as follows:
 * [CUB-200-2011](/datasets/cub_200_2011/)
 * [Home Objects 2006](https://data.caltech.edu/records/20089)
 * [Motorcycles 2001](https://data.caltech.edu/records/20088)
+* [Occluded Faces in the Wild](https://data.caltech.edu/records/20099)
