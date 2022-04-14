@@ -1,0 +1,15 @@
+@inproceedings{BMVC2015_52,
+	title={Describing Common Human Visual Actions in Images},
+	author={Matteo Ruggero Ronchi and Pietro Perona},
+	year={2015},
+	month={September},
+	pages={52.1-52.12},
+	articleno={52},
+	numpages={12},
+	booktitle={Proceedings of the British Machine Vision Conference (BMVC)},
+	publisher={BMVA Press},
+	editor={Xianghua Xie, Mark W. Jones, and Gary K. L. Tam},
+	doi={10.5244/C.29.52},
+	isbn={1-901725-53-7},
+	url={https://dx.doi.org/10.5244/C.29.52}
+}

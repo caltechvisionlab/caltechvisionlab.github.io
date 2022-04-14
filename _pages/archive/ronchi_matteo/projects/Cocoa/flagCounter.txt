@@ -1,0 +1,24 @@
+Hello,
+
+Thank you for creating a Flag Counter. We have generated a random password for
+you to manage your new counter.
+
+Your password is: 21333
+http://s05.flagcounter.com/admin.cgi?J0um
+To change your counter's settings, or prevent your own visits from being
+logged on your counter, visit the Flag Counter Management Section and log in
+with this password.
+
+If you ever lose your HTML code, or want to change your counter's colors or
+the maximum number of flags displayed, you can easily Re-generate Your Code.
+
+Please consider joining us in our forums, and if you have any questions please
+take a look at our FAQ.
+
+We hope you enjoy our service. Best of luck in collecting many flags on your
+site!
+
+Sincerely,
+Flag Counter Support
+
+Please do not reply to this message | Account created by: 131.215.134.242
