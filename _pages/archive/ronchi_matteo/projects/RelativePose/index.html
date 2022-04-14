@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <!-- Page Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Content Meta -->
+        <title>It's all Relative: Monocular 3D Human Pose Estimation from Weakly Supervised Data</title>
+        <meta name="description" content="It's all Relative: Monocular 3D Human Pose Estimation from Weakly Supervised Data - Project Page">
+        <meta name="author" content="Matteo Ruggero Ronchi">
+        <meta name="keywords" content=" Matteo Ruggero Ronchi, Oisin Mac Aodha, Pietro Perona, caltech">
+        <!-- Icon -->
+        <link rel="icon" href="./assets/icon/caltech_transparent.png">
+            
+        <!-- Bootstrap core CSS -->
+        <link href="./assets/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="./assets/theme/navbar.css" rel="stylesheet">
+                                        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+ 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54004953-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-54004953-6');
+        </script>
+
+        <script>
+          /**
+           * Function that tracks a click on an outbound link in Analytics.
+           * This function takes a valid URL string as an argument, and uses that URL string
+           * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+           * using 'navigator.sendBeacon' in browser that support it.
+           */
+          var trackOutboundLink = function(url) {
+          ga('send', 'event', 'outbound', 'click', url, {
+          'transport': 'beacon',
+          'hitCallback': function(){document.location = url;}
+          });
+          }
+        </script>
+        
+    </head>
+
+    <body>
+        <div class="container">
+            
+            <div class="page-header">
+                <h1>
+                    <b>It's all Relative: Monocular 3D Human Pose Estimation from Weakly Supervised Data</b>
+                    <small>Oral @ BMVC'18</small>
+                </h1>
+            </div>
+            
+            <!-- Static navbar -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    
+                    <!-- Static navbar HEADER -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://www.caltech.edu"><img src="./assets/icon/caltech_transparent.png" height="50px" /></a>
+                    </div>
+                    
+                    <!-- Static navbar BODY -->
+                    <div class="navbar-collapse collapse">
+                        <!-- LEFT -->
+                        <ul class="nav navbar-nav">
+                            
+                            <li><a href="#intro">Intro</a></li>
+                            <!-- <li class="active"><a href="intro">Intro</a></li> -->
+                            <li><a href="#contributions">Contributions</a></li>
+                            <li><a href="#results">Results</a></li>
+                            <li><a href="#dataset">Dataset</a></li>
+                            <li><a href="#download">Download</a></li>
+                            <li><a href="#cite">Cite</a></li>
+
+                        </ul>
+                        <!-- RIGHT -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                    
+                </div><!--/.container-fluid -->
+            </div><!--/.Static navbar -->
+            
+            <div class="section">
+            <section id="intro"> </section>
+            <h2 style=""><b>Introduction</b></h2>
+
+                <p align="justify">
+                Recent success in 2D pose estimation has been driven by larger, more varied, labeled datasets. While laborious, it is possible for human annotators to click on the 2D locations of different body parts to generate such training data.
+                </p>
+
+                <p align="justify">
+                Unfortunately, in the case of 3D pose estimation, it is much more challenging to acquire large amounts of training data containing people in real world settings with their corresponding 3D poses. This lack of large scale training data makes it difficult to both train deep models for 3D pose estimation and to evaluate the performance of existing methods in situations where there are large variations in scene types and poses. As a result, researchers have resorted to various alternative methods for collecting 3D pose training data - including motion capture, synthetic datasets, video, and multi-camera setups. 
+                </p>
+                
+                <a href="./Figures/intro.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                <img src="./Figures/intro.png" alt="" width="100%">
+                </a>
+
+                <p align="justify">
+                In this work, we argue that instead of using additional hardware to acquire full 3D ground truth training data from closed settings, Fig. 1(b), we can make use of human annotated relative depth information from images in the wild, Fig. 1(c), for successfully training 3D pose algorithms. When available, 3D ground truth is a very powerful training signal, but our results show that relative depth data can be used at the expense of little accuracy at test time. Our model predicts accurate 3D poses compared to using full supervision even with small amounts of relative training data, Fig. 1(d), here measured in megabytes.</p>
+
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+              
+            <div class="section">
+            <section id="contributions"> </section>
+            <h2 style=""><b>Contributions</b></h2>
+
+                <p align="justify">Our main contributions are:</p>
+                <ul>
+                    <li>
+                       <p align="justify"> A loss for 3D pose estimation of articulated objects that can be trained on sparse and easy to collect relative depth annotations, with performance comparable to the state of the art: </p>
+                       <div> <img src="./Figures/loss.png" width="100%" /> </div>
+                       <p align="justify"> The loss is the combination of the following four terms with additional weighting hyperparameters to control the influence of each component: <i>(i) L root</i>: enforcing the root joint of the 3D predictions to be centered at the origin; <i>(ii) L rel</i>: a pairwise ranking loss to encourage our model to predict the correct depth ordering of a 3D keypoint pair; <i>(iii) L proj</i>: a reprojection loss to force the correct location in both x and y in the image space; <i>(iv) L skel</i>: a geometric loss that enforces weak prior knowledge related to the ratio between the lengths of the different limbs.</p>
+                    </li>
+                    <li><p align="justify"> An empirical evaluation of the ability of crowd annotators to provide relative depth supervision in the context of human poses, measured on the <a href="http://vision.imar.ro/human3.6m/description.php">Human3.6M</a> Dataset:</p>
+                    <a href="./Figures/human_eval.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"><img src="./Figures/human_eval.png" width="100%" /></a>
+                    <p align="justify">In Fig. 2(a), we see that for keypoint pairs that are separated by more than 20 cm the merged predictions from the annotators are correct over 90% of the time, where random guessing is 50%. While only a small number of annotators annotated over 90% of the pairs correctly, Fig. 2 (b), the vast majority tend to perform better than random guessing. Fig. 2(c) shows that the rate of true positives versus true negatives for every annotator is fairly symmetric, indicating that annotators are equally good at providing the correct answer independently of a keypoint being in front or behind another one. In Fig. 2 (d) we sort the images from hardest to easiest based on the percentage of keypoint pairs that are correctly annotated. </p>
+                    </li>
+                    <li><p align="justify"> We extend the <a href="http://sam.johnson.io/research/lsp.html">LSP Dataset</a> with relative joint depth annotations for five random keypoint pairs per image, that can be used for both training and evaluation purposes.</p><div> <img src="./Figures/lsp.png" width="100%" /></div><p align="justify">See the <a href="#dataset">Dataset</a> section for more details.</p></li>
+                </ul>
+
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+            
+            <div class="section">
+            <section id="results"> </section>
+            <h2 style=""><b>Results</b></h2>
+                <ul>
+
+                  <li><h3 style=""><b>HUMAN 3.6M</b></h3></li>
+                  <a href="./Figures/human_results.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"><img src="./Figures/human_results.png" alt="" width="100%"></a>
+                   <p align="justify">Fig. 4(a) shows a histogram of the pose errors on the test set both for our method and the supervised baseline. The mode and median of the two curves are 10mm from each other. However, our method suffers from more catastrophic errors, as can be seen in the longer tail, and in the breakdown of the error over keypoint type in Fig. 4(b). As one might expect, body extremities such as ankles and wrists show a larger error (and deviation). Fig. 4(c) shows the degradation in performance for the cases in which the 2D input keypoints are obtained by adding a Gaussian noise with increasingly high variance (up to 20) to the 2D ground truth keypoints or by using the outputs of a keypoint detector. The performance of the fully supervised baseline is better when the train and test data have the same amount of noise degradation (lower error along the y axis), while our method performs best when noise is only added at test time (lower error along the x axis). In Fig. 4(d) we demonstrate that our model is also robust to noise in the relative depth labels during training. Performance is mostly unchanged when up to 25% of the labels are randomly flipped. The third bar corresponds to the amount of noise obtained from simulated crowd annotators. This is of interest, as it shows performance with noise comparable to what we would expect to collect in the wild. The worst performance is obtained when 50% of the labels are randomly flipped, and improves for cases in which the amount of noise is larger than 50%, as the model is able to exploit structure that is still present in the data, but produces poses that are flipped back to front.</p>
+
+                  <li><h3 style=""><b>LSP</b></h3></li>
+                  <a href="./Figures/lsp_results.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"><img src="./Figures/lsp_results.png" alt="" width="100%"></a>
+                  <p align="justify">The LSP dataset, unlike Human3.6M, does not contain ground truth 3D poses. As a result, we evaluate the models by measuring the percentage of relative labels incorrectly predicted compared to the annotations we collected via Mechanical Turk. The 3D supervised model and our relative model, with one comparison per input pose, trained on Human3.6M achieve test errors of 34.4% and 34.3% respectively. We are able to further reduce the error of our relative model to 24.1% by fine-tuning it using the ordinal annotations collected for the LSP training set. Furthermore, training our relative model from scratch using exclusively the LSP training set also outperforms the supervised baseline obtaining an error of 27.1%.</p>
+
+                </ul>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+
+            <div class="section">
+            <section id="dataset"> </section>
+            <h2 style=""><b>Relative Depth LSP Dataset</b></h2>
+            <p align="justify">We extended the LSP Dataset (using a publicly available <a href="http://www.vision.caltech.edu/~mronchi/projects/RotationInvariantMovemes/#dataset"><i>json version</i></a>), with the relative depth annotations collected from Amazon Mechanical Turk. Crowd annotators were presented with an image along with two randomly selected keypoints and were instructed to imagine themselves looking through the camera and report which of the two keypoints appeared closer to them.  We forced annotators to choose from one of the two possibilities and did not provide a "same distance option" for ambiguous situations, as those cases can be inferred by inspecting the disagreement between annotators. </p>
+
+            <p align="justify"> For each image in LSP, we collected five random pairs of keypoints, ensuring that five different annotators labeled the same keypoints and image combination, resulting in a total of 50000 annotations by 348 workers, who provided an average of 144 labels each. We merged the five votes per keypoint pair using a <a href="https://github.com/gvanhorn38/crowdsourcing">crowd annotation system</a>, resulting in a single predicted probabilistic label per pair.</p>
+
+            <p align="justify">The Figures below contain example visualizations from the labels in the provided dataset: names and ordering of each pair of selected keypoints are written on top of their plot and the green keypoint is annotated to be closer to the camera compared to the red one. The confidence of the label in the bottom-right box determines the color of the connection between the keypoints.</p>
+
+            <div class="cf">
+             <div><img src="./Figures/image_id_15.png" alt="" width="500px"></div> 
+             <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+             <div>
+               <p align="justify">The <a href="#download"><b>Reltive Depth LSP Dataset</b></a> contains the following data:</p> 
+               <ul>
+                <li><b>'joint_names'</b>: The ordered list of the names of the 2D keypoints.</li>
+                <li><b>'images'</b>: The list of 2000 annotations for each image in LSP.</li>
+
+               </ul>
+               <p align="justify">Every annotation is composed of:</p>
+               <ul>
+                <li><b>'im_file'</b>: Name of the image file.</li>
+                <li><b>'is_train'</b>: Boolean flag indicating if the image is in the train or test set.</li>
+                <li><b>'keypoints'</b>: List of the 28 coordinates containing the 2D skeleton of every image.</li>
+               </ul>
+             </div>
+            </div>
+
+            <div class="cf">
+             <div><img src="./Figures/image_id_1894.png" alt="" width="500px"></div>
+             <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+             <div>
+               <ul>
+                  <li><b>'occluded'</b>: List of flags indicating the visibility of every keypoint.</li>
+                  <li><b>'anns'</b>: List of 5 keypoint pairs containing for every pair: 
+                     <ol>
+                      <li>the indices of the pair;</li>
+                      <li>the raw depth label from every annotator;
+                      <li>the merged label;</li>
+                      <li>the probabilistic confidence and associated risk of the merged label.</li>
+                     </ol> 
+               </ul>
+             </div>
+            </div>
+
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+
+            <div class="section">
+            <section id="download"> </section>
+            <h2 style=""><b>Download</b></h2>
+
+            <p align="justify">We provide 1) a pytorch implementation of our algorithm, 2) the crowd collected relative depth annotations of the LSP dataset in JSON file format, and 3) the output of our relative model on all of the Human3.6M and LSP test set.</p>
+
+                <div class="row text-center">
+                    <a class="btn btn-large btn-primary" type="button" href="https://github.com/matteorr/rel_3d_pose" onclick="trackOutboundLink('https://github.com/matteorr/rel_3d_pose'); return true;" >
+                        <b> GitHub Code </b>
+                    </a>
+                    <a class="btn btn-large btn-primary" type="button" href="Dataset/relative_depth_lsp_v1.json.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Relative Depth LSP Dataset',this.href])">
+                        <b> Relative Depth LSP Dataset </b>
+                    </a>
+                    <a class="btn btn-large btn-primary" type="button" href="Outputs/bmvc_2018_output_poses.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Model Output Poses',this.href])">
+                        <b> Output Poses </b>
+                    </a>
+                </div>
+
+                Notes:
+                <ul>
+                    <li>Code Version [1.0.0].</li>
+                    <li>Data Version [1.0].</li>
+                    <li>Output Poses Date [7/27/2018].</li>
+                    <li> This code and data are licensed under the <a href="https://en.wikipedia.org/wiki/MIT_License" target="blank">MIT License</a>.</li>
+                </ul>
+            
+
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+            
+            <div class="section">
+            <section id="cite"> </section>
+            <h2 style=""><b>Cite</b></h2>
+             <p>If you find our paper or the released data or code useful to your work, please cite:</p>
+             <pre>@inproceedings{</br>  DBLP:conf/bmvc/RonchiAEP18,</br>  author    = {Matteo Ruggero Ronchi and Oisin {Mac Aodha} and Robert Eng and Pietro Perona},</br>  title     = {It's all Relative: Monocular 3D Human Pose Estimation from Weakly Supervised Data},</br>  booktitle = {British Machine Vision Conference 2018, {BMVC} 2018, Northumbria University, Newcastle, UK, September 3-6, 2018},</br>  pages     = {300},</br>  year      = {2018},</br>  crossref  = {DBLP:conf/bmvc/2018},</br>  url       = {http://bmvc2018.org/contents/papers/0182.pdf},</br>  timestamp = {Mon, 17 Sep 2018 15:39:51 +0200},</br>  biburl    = {https://dblp.org/rec/bib/conf/bmvc/RonchiAEP18},</br>  bibsource = {dblp computer science bibliography, https://dblp.org}</br>}</pre>
+                   <ul>
+                    <li>
+                        It's all Relative: Monocular 3D Human Pose Estimation from Weakly Supervised Data<br>
+                        M.R. Ronchi, O. Mac Aodha, R. Eng, and P. Perona<br>
+                        Oral Presentation @ BMVC 2018.<br>
+                        
+                        <a href="./Cite/BMVC18_RelativePose_BIBTEX" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Bibtex',this.href])">
+                            <span class="label_download">Bibtex</span>
+                        </a>
+                        <a href="http://vision.caltech.edu/%7Emronchi/papers/BMVC18_Relative3DPose_PAPER.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Main Paper PDF',this.href])">
+                            <span class="label_download">Paper</span>
+                        </a>
+                        
+                    </li>
+                </ul>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+   
+            <div class="section">
+            <section id="contact"> </section>
+            <h2 style=""><b>Contact</b></h2>
+                <p>© 2018,
+                    <a href="http://vision.caltech.edu/%7Emronchi/">Matteo Ruggero Ronchi</a>, 
+                    <a href="http://vision.caltech.edu/%7Emacaodha/">Oisin Mac Aodha</a>, Robert Eng, and
+                    <a href="http://www.vision.caltech.edu/pietroperona.htm">Pietro Perona</a>
+                </p>
+                
+                <form class="email" role="form" width="100px" id="email-form">
+                    <div class="form-group">
+                        <label for="name">Your message:</label>
+                        <textarea class="form-control" rows="15" id="email-text">Write your email here.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-default" id="send-button" value="click" onclick="sendEmail(1); return false">Send with email client</button>
+                        <button class="btn btn-default" id="send-button" value="click" onclick="sendEmail(2); return false">Send with Gmail</button>
+                        <button class="btn btn-default" id="send-button" value="click" onclick="sendEmail(3); return false">Send with Yahoomail</button>
+                    </div>
+                </form>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+            <div class="section">
+               <a href="https://info.flagcounter.com/DXeX"><img src="https://s05.flagcounter.com/count2/DXeX/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_30/viewers_3/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+            </div>            
+        </div>
+        
+        <!-- Bootstrap core JavaScript
+         ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <!-- sendEmail java script source file -->
+        <script src="./assets/js/sendEmail.js"></script>
+        <script src="./assets/js/sendGmail.js"></script>
+    </body>
+</html>

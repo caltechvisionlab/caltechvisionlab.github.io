@@ -1,0 +1,17 @@
+@inproceedings{DBLP:conf/bmvc/RonchiAEP18,
+  author    = {Matteo Ruggero Ronchi and
+               Oisin {Mac Aodha} and
+               Robert Eng and
+               Pietro Perona},
+  title     = {It's all Relative: Monocular 3D Human Pose Estimation from Weakly
+               Supervised Data},
+  booktitle = {British Machine Vision Conference 2018, {BMVC} 2018, Northumbria University,
+               Newcastle, UK, September 3-6, 2018},
+  pages     = {300},
+  year      = {2018},
+  crossref  = {DBLP:conf/bmvc/2018},
+  url       = {http://bmvc2018.org/contents/papers/0182.pdf},
+  timestamp = {Mon, 17 Sep 2018 15:39:51 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/bmvc/RonchiAEP18},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
