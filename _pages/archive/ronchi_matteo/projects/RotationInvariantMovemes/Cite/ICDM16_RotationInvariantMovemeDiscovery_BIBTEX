@@ -1,0 +1,17 @@
+@inproceedings{DBLP:conf/icdm/RonchiKY16,
+  author    = {Matteo Ruggero Ronchi and
+               Joon Sik Kim and
+               Yisong Yue},
+  title     = {A Rotation Invariant Latent Factor Model for Moveme Discovery from
+               Static Poses},
+  booktitle = {{IEEE} 16th International Conference on Data Mining, {ICDM} 2016,
+               December 12-15, 2016, Barcelona, Spain},
+  pages     = {1179--1184},
+  year      = {2016},
+  crossref  = {DBLP:conf/icdm/2016},
+  url       = {https://doi.org/10.1109/ICDM.2016.0156},
+  doi       = {10.1109/ICDM.2016.0156},
+  timestamp = {Mon, 11 Feb 2019 17:32:48 +0100},
+  biburl    = {https://dblp.org/rec/bib/conf/icdm/RonchiKY16},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}

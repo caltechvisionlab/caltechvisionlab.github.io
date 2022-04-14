@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <!-- Page Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Content Meta -->
+        <title>A Rotation Invariant Latent Factor Model for Moveme Discovery from Static Poses</title>
+        <meta name="description" content="A Rotation Invariant Latent Factor Model for Moveme Discovery from Static Poses - Project Page">
+        <meta name="author" content="Matteo Ruggero Ronchi">
+        <meta name="keywords" content=" Matteo Ruggero Ronchi, Joon Sik Kim, Yisong Yue, caltech">
+        <!-- Icon -->
+        <link rel="icon" href="./assets/icon/caltech_transparent.png">
+            
+        <!-- Bootstrap core CSS -->
+        <link href="./assets/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="./assets/theme/navbar.css" rel="stylesheet">
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-54004953-4', 'auto');
+          ga('send', 'pageview');
+        </script>
+
+        <script>
+         /**
+         * Function that tracks a click on an outbound link in Analytics.
+         * This function takes a valid URL string as an argument, and uses that URL string
+         * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+         * using 'navigator.sendBeacon' in browser that support it.
+         */
+         var trackOutboundLink = function(url) {
+         ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+         });
+         }
+        </script>
+                             
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    
+    <body>
+        <div class="container">
+            
+            <div class="page-header">
+                <h1>
+                    <b>A Rotation Invariant Latent Factor Model for Moveme Discovery from Static Poses</b>
+                    <small>ICDM'16</small>
+                </h1>
+            </div>
+            
+            <!-- Static navbar -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    
+                    <!-- Static navbar HEADER -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://www.caltech.edu"><img src="./assets/icon/caltech_transparent.png" height="50px" /></a>
+                    </div>
+                    
+                    <!-- Static navbar BODY -->
+                    <div class="navbar-collapse collapse">
+                        <!-- LEFT -->
+                        <ul class="nav navbar-nav">
+                            
+                            <li><a href="#intro">Intro</a></li>
+                            <!-- <li class="active"><a href="intro">Intro</a></li> -->
+                            <li><a href="#contributions">Contributions</a></li>
+                            <li><a href="#results">Results</a></li>
+                            <li><a href="#dataset">Dataset</a></li>
+                            <li><a href="#download">Download</a></li>
+                            <li><a href="#cite">Cite</a></li>
+
+                        </ul>
+                        <!-- RIGHT -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#contact">Contact</a></li>
+                            <!--
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Nav header</li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>-->
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                    
+                </div><!--/.container-fluid -->
+            </div><!--/.Static navbar -->
+            
+            <!-- Main component for a primary marketing message or call to action
+            <div class="jumbotron">
+                <h1>Navbar example</h1>
+                <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+                <p>
+                <a class="btn btn-lg btn-primary" href="" role="button">View navbar docs &raquo;</a>
+                </p>
+            </div> -->
+            
+            <div class="section">
+            <section id="intro"> </section>
+            <h2 style=""><b>Introduction</b></h2>
+
+                <p align="justify">What are the typical ranges of motion for human arms? What types of leg movements tend to correlate with specific shoulder positions? How can we expect the arms to move given the current body pose? Our goal is to address these questions by recovering a set of ``bases poses'' that summarize the variability of movements in a given collection of static poses captured from images at various viewing angles.</p>
+                <div class="cf">
+                  <div>
+                    <p align="justify">One of the main difficulties of studying human movement is that it is a priori unrestricted, except for physically imposed joint angle limits which have been studied in medical text books, typically for a limited number of configurations. Furthermore, human movement may be distinguished into movemes, actions, and activities depending on structure, complexity, and duration. Movemes refer to the simplest meaningful pattern of motion: a short, target-oriented trajectory, that cannot be further decomposed, e.g. ``reach'', ``grasp'', ``step'', ``kick''.</p>
+                    <p align="justify">Extensive studies have been carried out on human action and activity recognition, however little attention has been paid to movemes since human behaviour is difficult to analyze at such a fine scale of dynamics. In this paper, our primary goal is to learn a basis space to smoothly capture movemes from a collection of two dimensional images, although our learned representation can also aid in higher level reasoning.</p>
+                  </div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div> <img src="./Figures/overall_goal.png" width="350px" /> </div>
+                </div>
+
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+            
+            <div class="section">
+            <section id="contributions"> </section>
+            <h2 style=""><b>Contributions</b></h2>
+                <p align="justify">Given a collection of static joint locations from images taken at any angle of view we learn a factorization into a basis pose matrix <b>U</b> and a coefficient matrix <b>V</b>. The learned basis poses <b>U</b> are <i>rotation-invariant</i> and can be globally applied across a range of viewing angles. A sparse linear combination of the learned basis accurately reconstructs the pose of a human involved in an action at any angle of view, also for poses not contained in the training set. In summary, the main contributions of our paper are:</p>
+                <ul>
+                    <li>
+                        <p align="justify">An <b>unsupervised</b> method for learning a <b>rotation-invariant</b> set of basis poses. We propose a solution to the intrinsically ill-posed problem of going from static poses to movements, without being affected by the angle of view.</p>
+                    </li>
+                    <li>
+                        <p align="justify">A demonstration of how the learned basis poses can be used in various applications, including manifold traversal, discriminative classification, and synthesis of movements.</p>
+                    </li>
+                    <li>
+                        <p align="justify">The introduction of three new sets of annotations for each image in the <a href="http://sam.johnson.io/research/lsp.html">LSP dataset</a>. (1) The ground truth sport label that each portrayed person is performing, (<i>Athletics, Badminton, Baseball, Gymnastics, Parkour, Soccer, Tennis, Volleyball, Other</i>). (2) The mean and variance for the angle of view that each portrayed person is facing, obtained by three different annotators. (3) The 3D pose of each portrayed person, obtained through the <a href="http://poseprior.is.tue.mpg.de/downloads">MPI Pose Prior</a> algorithm. See the <a href="#dataset">Dataset</a> section for more details.</p>
+                    </li>
+                </ul>
+
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+            
+            <div class="section">
+            <section id="results"> </section>
+            <h2 style=""><b>Results</b></h2>
+                <p align="justify">
+                We analyze the flexibility and usefuleness of the proposed model in a variety of application domains and experiments. In particular, we evaluate (i) the performance of the learned representation for supervised learning tasks such as activity classification; (ii) whether the learned representation captures enough semantics for meaningful manifold traversal and visualization; and (iii) the robustness to initialization and the generalization error. Finally, we provide a qualitative visualization of the embedding of the manifold of human motion that was learned. Collectively, results suggest that our approach is effective at capturing rotation invariant semantics of the underlying data.
+                </p>
+                <ul>
+                    <li><h3 style=""><b>Activity Recognition</b></h3></li>
+                
+                        <div> <img src="./Figures/activity_recognition.png" width="100%" /> </div>
+                        <p align="justify">
+                        We show the results obtained from five fold cross validation. The proposed 3-D latent factor model (<i>lfa3d</i>) outperforms all other methods by an average accuracy of about 11%. The 2-D model (<i>lfa2d</i>) performs slightly worse than the clustered SVD baseline (<i>svd+rot</i>), but both show more than a 5% average improvement over the <i>svd</i> baseline.</p>
+                        <p align="justify"> The two most challenging activities are <i>athletics</i>, which does not posses characterizing movements; and <i>tennis</i>, whose movemes are shared and thus confused with multiple other sports, <i>badminton</i> and <i>baseball</i> above all.<p>  
+                
+                    <li><h3 style=""><b>Action Dynamics Inference</b></h3></li>
+                
+                        <div> <img src="./Figures/dynamics_inference.png" width="100%" /> </div>
+                        <p align="justify">
+                        In this experiment, we shuffled 1000 sequences of four images for four sport actions (<i>baseball pitch</i>, <i>tennis forehand</i>, <i>tennis serve</i>, <i>baseball swing</i>), and verified how precisely could the underlying chronological sequence be recovered. The analysis is repeated five times to obtain standard deviations, and performance is measured in terms of three metrics (shown in the figure): (1) what percentage of the 1000 sequences is exactly reordered; (2) how many poses are wrongly positioned; and (3) how bad are the reordering mistakes, computed as the number of swaps necessary to correct a sequence. We also plot the per-position accuracy in each sport for all methods.
+                        </p>
+                        <p align="justify">The <i>lfa3d</i> model has significantly better outcomes compared to <i>lfa2d</i> and <i>svd</i>, which perform similarly. Specifically, <i>lfa3d</i> correctly reorders more than twice the sequences overall (1314 against 555 of <i>lfa2d</i>) averages 1.6 errors, and is the only algorithm to require an average number of swaps smaller than 1.</p>
+                    
+                    <li><h3 style=""><b>Moveme Visualization</b></h3></li>
+                        <div><img src="./Figures/learned_movemes_representation.png" width="100%"/></div>
+                           <p align="justify">The most significant movemes contained in the training set are captured by the basis pose matrix <b>U</b> and encoded in the form of a displacement from the mean pose. Each column of <b>U</b> corresponds to a latent factor that describes some of the movement variability present in the data.</p>
+                           <p align="justify">We report the motion described by three latent factors: the rows show the pose obtained by adding an increasing portion of the learned moveme (from 30% - second column, to 100% - last column) to the mean pose of the data (first column). Two are easily interpretable, <i>soccer kick</i> and <i>tennis forehand</i>, while one is not as well defined, <i>volleyball strike / tennis serve</i>. The movemes differentiate very quickly, as early as 50% of the final movement is added.</p>
+                     <li><h3 style=""><b>Initialization Sensitivity</b></h3></li> 
+                        <div class="cf">
+                          <div> <img src="./Figures/initialization_sensitivity_angle_recovery.png" width="400px" /> </div>
+                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                          <div>
+                           <p align="justify">The <i>lfa3d</i> method learns a rotation invariant representation by treating the angle of view of each pose as a variable which is optimized through gradient descent, and requires an initial guess for each training instance. We investigate how sensitive is the model to initialization, and how close is the recovered angle of view to the ground truth.</p>
+                            <p align="justify">In the above Figure, we show the Root Mean Squared Error (RMSE) and cosine similarity with ground truth, for three initialization methods: (1) <i>random</i>, between 0 and 2&pi;; (2) <i>coarse</i>, coarsening into discrete buckets (e.g., 4 clusters indicates that we only know the viewing angle quadrant during initalization); and (3) <i>ground-truth</i>.</p>
+                         </div>
+                         </div>
+                         <p align="justify">As the number of clusters increases, we see that performance remains constant for <i>random</i> and <i>ground truth</i>, while both evaluation metrics improve significantly for <i>coarse</i> initialization. For instance, using just four clusters, <i>coarse</i> initialization obtains almost perfect cosine similarity. These results suggest that using very simple heuristics to predict the viewing angle quadrant of a pose is sufficient to obtain optimal performance.</p>
+                     
+                 <li><h3 style=""><b>Manifold Visualization</b></h3></li>
+
+                        <div> <img src="./Figures/tsne.png" width="100%" /> </div>
+                         <p align="justify">Each pose in LSP is mapped in the human motion space through the coefficients of the corresponding column of <b>V</b> learned with the <i>lfa3d</i> method, and then projected in two-dimensions using t-SNE. Poses describing similar movements are mapped to nearby positions and form consistent clusters, whose relative distance depends on which latent factors are used to reconstruct the contained poses. Upper body movements are mapped closely in the lower right corner, while lower body movements appear at the opposite end of the embedding. The mapping in the manifold is not affected by the direction each pose is facing, as nearby elements may have very different angle of view, confirming that the learned representation is rotation invariant.</p>
+                         <div class="cf">
+                           <div> <img src="./Figures/tsne_heatmaps.png" width="350px" /> </div>
+                           <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                           <div>
+                             <p align="justify">The heatmaps obtained from the activations of two latent factors (<i>soccer kick</i> and <i>volleyball strike</i>), overlaid on top of the t-SNE mapping are shown in the Figure on the left. Clearly, the epicentrum of the <i>volleyball strike</i> basis pose is located where volleyball-like poses appear in the t-SNE plot (lower-right corner). Conversly, the <i>soccer kick</i> basis pose is mostly dominant in the top-left area and the heatmap is diffused, consistent with the observation that most poses contain some movement of the legs.</p>
+                        </div>
+
+                </ul>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+            
+            <div class="section">
+            <section id="dataset"> </section>
+            <h2 style=""><b>Comprehensive LSP (CO_LSP) Dataset</b></h2>
+                <p align="justify">We extended the LSP dataset, providing additional annotations of the angle of view each depicted subject is facing. We also include the 3D keypoint locations of the 14 joints of the human body, obtained by runnnig an off-the-shelf method for 2D to 3D pose estimation algorithm [2], along with the 2D annotations from the original LSP dataset [1]. We redistribute these comprehensive annotations in JSON format as the Comprehensive LSP (<b>CO_LSP</b>) Dataset, along with a <a href="#download">Python API</a> to load, manipulate and visualize the annotations.</p>
+                <div class="cf">
+                  <div> <img src="./Figures/example_gui.png" width="350px" /> </div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div>
+                  <p align="justify">We collected high-quality viewing angle annotations for each pose in LSP. Although these annotations are not necessary for training, we used them to demonstrate the robustness of our model to poor angle initialization, and that it can in fact recover the ground truth value. Three annotators evaluated each image and were instructed to provide the direction at which the torso of the depicted subject was facing through the GUI visible in Figure. The standard deviation in the reported angle of view averaged over the whole dataset is 12 degrees, and more than half of the images have a deviation of less than 10 degrees, showing a very high annotator agreement for the task.</p>
+                  </div>
+                 </div>
+                <p align="justify">Example visualization for an annotation in the dataset:</p>
+                <div> <img src="./Figures/sample_show_anns.png" width="100%" /> </div>
+                Notes:
+                <ul>
+                    <li>Dataset Version [1.0]: 2000 images with corresponding 2d and 3d keypoint locations for 14 joints of the human body, activity and angle of view annotations.</li>
+                    <li>If you use the data provided at this page please cite our work along with the following two references.</li>
+                    <li><a href="http://www.comp.leeds.ac.uk/mat4saj/lsp.html">[1]</a> Leeds Sports Pose Dataset</li>
+                    <li><a href="http://poseprior.is.tue.mpg.de/downloads">[2]</a> Pose Prior 2D to 3D Toolbox</li>
+                    <li> This data is licensed under the <a href="http://en.wikipedia.org/wiki/BSD_licenses" target="blank">Simplified BSD License</a>.</li>
+                </ul>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+            
+            <div class="section">
+            <section id="download"> </section>
+            <h2 style=""><b>Download</b></h2>
+               <p align="justify">We provide a python implementation of our algorithm and the three new annotations of the LSP dataset in JSON file format. Full details are described in the <a href="#dataset">Dataset</a> Section and in the README files.</p>
+                
+                <div class="row text-center">
+                    <a class="btn btn-large btn-primary" type="button" href="https://github.com/matteorr/rotation_invariant_movemes" onclick="trackOutboundLink('https://github.com/matteorr/rotation_invariant_movemes'); return false;">
+                        <b> GitHub Code & CO_LSP API </b>
+                    </a>
+                    <a class="btn btn-large btn-primary" type="button" href="Dataset/CO_LSP_train2016.json.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CO_LSP Dataset',this.href])">
+                        <b> CO_LSP Dataset </b>
+                    </a>
+                </div>
+                
+                Notes:
+                <ul>
+                    <li>Code Version [1.0.0].</li>
+                    <li> This code and data are licensed under the <a href="http://en.wikipedia.org/wiki/BSD_licenses" target="blank">Simplified BSD License</a>.</li>
+                </ul>
+                
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+            
+            <div class="section">
+            <section id="cite"> </section>
+            <h2 style=""><b>Cite</b></h2>
+            <p>If you find our paper or the released data or code useful to your work, please cite:</p>
+            <pre>@inproceedings{</br>  DBLP:conf/icdm/RonchiKY16,</br>  author    = {Matteo Ruggero Ronchi and Joon Sik Kim and Yisong Yue},</br>  title     = {A Rotation Invariant Latent Factor Model for Moveme Discovery from Static Poses},</br>  booktitle = {{IEEE} 16th International Conference on Data Mining, {ICDM} 2016, December 12-15, 2016, Barcelona, Spain},</br>  pages     = {1179--1184},</br>  year      = {2016},</br>  crossref  = {DBLP:conf/icdm/2016},</br>  url       = {https://doi.org/10.1109/ICDM.2016.0156},</br>  doi       = {10.1109/ICDM.2016.0156},</br>  timestamp = {Mon, 11 Feb 2019 17:32:48 +0100},</br>  biburl    = {https://dblp.org/rec/bib/conf/icdm/RonchiKY16},</br>  bibsource = {dblp computer science bibliography, https://dblp.org}</br>}</pre>
+                <ul>
+                    <li>
+                        A Rotation Invariant Latent Factor Model for Moveme Discovery from Static Pose<br>
+                        M.R. Ronchi, J.S. Kim and Y. Yue<br>
+                        
+                        ICDM 2016, Barcelona, Spain, December 2016.<br>
+                        
+                        <a href="./Cite/ICDM16_RotationInvariantMovemeDiscovery_BIBTEX" target="_blank">
+                            <span class="label_download">Bibtex</span>
+                        </a>
+                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ICDM16_RotationInvariantMovemeDiscovery_PAPER_LONG.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Long Paper PDF',this.href])">
+                            <span class="label_download">Long Paper</span>
+                        </a>
+                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ICDM16_RotationInvariantMovemeDiscovery_PAPER_SHORT.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Short Paper PDF',this.href])">
+                            <span class="label_download">Short Paper</span>
+                        </a>
+                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ICDM16_RotationInvariantMovemeDiscovery_POSTER.pdf" target="'_blank" onclick="_gaq.push(['_trackEvent','Download','Poster',this.href])">
+                            <span class="label_download">Poster</span>
+                        </a>
+                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ICDM16_RotationInvariantMovemeDiscovery_PRESENTATION.pdf" target="'_blank" onclick="_gaq.push(['_trackEvent','Download','Presentation',this.href])">
+                            <span class="label_download">Presentation</span>
+                        </a>
+                        
+                    </li>
+                </ul>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+            
+            <div class="section">
+            <section id="contact"> </section>
+            <h2 style=""><b>Contact</b></h2>
+                <p>© 2016,
+                    <a href="http://vision.caltech.edu/%7Emronchi/">Matteo Ruggero Ronchi</a>,
+                    <a href="https://www.linkedin.com/in/joon-sik-david-kim-36103855">Joon Sik Kim</a>, and
+                    <a href="http://www.yisongyue.com/">Yisong Yue</a>
+                </p>
+                
+                <form class="email" role="form" width="100px" id="email-form">
+                    <div class="form-group">
+                        <label for="name">Your message:</label>
+                        <textarea class="form-control" rows="15" id="email-text">Write your email here.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-default" id="send-button" value="click" onclick="sendEmail(1); return false">Send with email client</button>
+                        <button class="btn btn-default" id="send-button" value="click" onclick="sendEmail(2); return false">Send with Gmail</button>
+                        <button class="btn btn-default" id="send-button" value="click" onclick="sendEmail(3); return false">Send with Yahoomail</button>
+                    </div>
+                </form>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </div>
+
+            <div class="section">
+            <a href="http://s05.flagcounter.com/more/8Oz"><img src="http://s05.flagcounter.com/count2/8Oz/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_18/viewers_3/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+            </div>
+            
+        </div> <!-- /container -->
+        
+        <!-- Bootstrap core JavaScript
+         ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <!-- sendEmail java script source file -->
+        <script src="./assets/js/sendEmail.js"></script>
+        <script src="./assets/js/sendGmail.js"></script>
+        
+    </body>
+</html>
