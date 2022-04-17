@@ -27,5 +27,6 @@ As of April 2022, our current status is as follows:
 * [COCO-a](https://data.caltech.edu/records/20109)
 * [Home Objects 2006](https://data.caltech.edu/records/20089)
 * [Motorcycles 2001](https://data.caltech.edu/records/20088)
+* [Caltech Multi-Distance Portraits (CMDP)](https://data.caltech.edu/records/20110)
 * [Occluded Faces in the Wild](https://data.caltech.edu/records/20099)
 * [Relative Depth LSP](https://data.caltech.edu/records/20096)
