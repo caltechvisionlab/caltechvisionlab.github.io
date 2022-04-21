@@ -1,3 +1,11 @@
+---
+title: "Perona Lab - Home"
+layout: null
+excerpt: "Perona Lab"
+sitemap: false
+permalink: /~mronchi/projects/RelativePose/
+---
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -14,12 +22,12 @@
         <meta name="author" content="Matteo Ruggero Ronchi">
         <meta name="keywords" content=" Matteo Ruggero Ronchi, Oisin Mac Aodha, Pietro Perona, caltech">
         <!-- Icon -->
-        <link rel="icon" href="./assets/icon/caltech_transparent.png">
+        <link rel="icon" href="/archive/ronchi_matteo/assets/icon/caltech_transparent.png">
             
         <!-- Bootstrap core CSS -->
-        <link href="./assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/archive/ronchi_matteo/assets/css/bootstrap.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="./assets/theme/navbar.css" rel="stylesheet">
+        <link href="/archive/ronchi_matteo/assets/theme/navbar.css" rel="stylesheet">
                                         
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -76,7 +84,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="http://www.caltech.edu"><img src="./assets/icon/caltech_transparent.png" height="50px" /></a>
+                        <a class="navbar-brand" href="http://www.caltech.edu"><img src="/archive/ronchi_matteo/assets/icon/caltech_transparent.png" height="50px" /></a>
                     </div>
                     
                     <!-- Static navbar BODY -->
@@ -114,8 +122,8 @@
                 Unfortunately, in the case of 3D pose estimation, it is much more challenging to acquire large amounts of training data containing people in real world settings with their corresponding 3D poses. This lack of large scale training data makes it difficult to both train deep models for 3D pose estimation and to evaluate the performance of existing methods in situations where there are large variations in scene types and poses. As a result, researchers have resorted to various alternative methods for collecting 3D pose training data - including motion capture, synthetic datasets, video, and multi-camera setups. 
                 </p>
                 
-                <a href="./Figures/intro.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
-                <img src="./Figures/intro.png" alt="" width="100%">
+                <a href="/archive/ronchi_matteo/projects/RelativePose/Figures/intro.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                <img src="/archive/ronchi_matteo/projects/RelativePose/Figures/intro.png" alt="" width="100%">
                 </a>
 
                 <p align="justify">
@@ -132,14 +140,14 @@
                 <ul>
                     <li>
                        <p align="justify"> A loss for 3D pose estimation of articulated objects that can be trained on sparse and easy to collect relative depth annotations, with performance comparable to the state of the art: </p>
-                       <div> <img src="./Figures/loss.png" width="100%" /> </div>
+                       <div> <img src="/archive/ronchi_matteo/projects/RelativePose/Figures/loss.png" width="100%" /> </div>
                        <p align="justify"> The loss is the combination of the following four terms with additional weighting hyperparameters to control the influence of each component: <i>(i) L root</i>: enforcing the root joint of the 3D predictions to be centered at the origin; <i>(ii) L rel</i>: a pairwise ranking loss to encourage our model to predict the correct depth ordering of a 3D keypoint pair; <i>(iii) L proj</i>: a reprojection loss to force the correct location in both x and y in the image space; <i>(iv) L skel</i>: a geometric loss that enforces weak prior knowledge related to the ratio between the lengths of the different limbs.</p>
                     </li>
                     <li><p align="justify"> An empirical evaluation of the ability of crowd annotators to provide relative depth supervision in the context of human poses, measured on the <a href="http://vision.imar.ro/human3.6m/description.php">Human3.6M</a> Dataset:</p>
-                    <a href="./Figures/human_eval.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"><img src="./Figures/human_eval.png" width="100%" /></a>
+                    <a href="/archive/ronchi_matteo/projects/RelativePose/Figures/human_eval.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"><img src="/archive/ronchi_matteo/projects/RelativePose/Figures/human_eval.png" width="100%" /></a>
                     <p align="justify">In Fig. 2(a), we see that for keypoint pairs that are separated by more than 20 cm the merged predictions from the annotators are correct over 90% of the time, where random guessing is 50%. While only a small number of annotators annotated over 90% of the pairs correctly, Fig. 2 (b), the vast majority tend to perform better than random guessing. Fig. 2(c) shows that the rate of true positives versus true negatives for every annotator is fairly symmetric, indicating that annotators are equally good at providing the correct answer independently of a keypoint being in front or behind another one. In Fig. 2 (d) we sort the images from hardest to easiest based on the percentage of keypoint pairs that are correctly annotated. </p>
                     </li>
-                    <li><p align="justify"> We extend the <a href="http://sam.johnson.io/research/lsp.html">LSP Dataset</a> with relative joint depth annotations for five random keypoint pairs per image, that can be used for both training and evaluation purposes.</p><div> <img src="./Figures/lsp.png" width="100%" /></div><p align="justify">See the <a href="#dataset">Dataset</a> section for more details.</p></li>
+                    <li><p align="justify"> We extend the <a href="http://sam.johnson.io/research/lsp.html">LSP Dataset</a> with relative joint depth annotations for five random keypoint pairs per image, that can be used for both training and evaluation purposes.</p><div> <img src="/archive/ronchi_matteo/projects/RelativePose/Figures/lsp.png" width="100%" /></div><p align="justify">See the <a href="#dataset">Dataset</a> section for more details.</p></li>
                 </ul>
 
                 <p class="pull-right"><a href="#">Back to top</a></p>
@@ -151,11 +159,11 @@
                 <ul>
 
                   <li><h3 style=""><b>HUMAN 3.6M</b></h3></li>
-                  <a href="./Figures/human_results.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"><img src="./Figures/human_results.png" alt="" width="100%"></a>
+                  <a href="/archive/ronchi_matteo/projects/RelativePose/Figures/human_results.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"><img src="/archive/ronchi_matteo/projects/RelativePose/Figures/human_results.png" alt="" width="100%"></a>
                    <p align="justify">Fig. 4(a) shows a histogram of the pose errors on the test set both for our method and the supervised baseline. The mode and median of the two curves are 10mm from each other. However, our method suffers from more catastrophic errors, as can be seen in the longer tail, and in the breakdown of the error over keypoint type in Fig. 4(b). As one might expect, body extremities such as ankles and wrists show a larger error (and deviation). Fig. 4(c) shows the degradation in performance for the cases in which the 2D input keypoints are obtained by adding a Gaussian noise with increasingly high variance (up to 20) to the 2D ground truth keypoints or by using the outputs of a keypoint detector. The performance of the fully supervised baseline is better when the train and test data have the same amount of noise degradation (lower error along the y axis), while our method performs best when noise is only added at test time (lower error along the x axis). In Fig. 4(d) we demonstrate that our model is also robust to noise in the relative depth labels during training. Performance is mostly unchanged when up to 25% of the labels are randomly flipped. The third bar corresponds to the amount of noise obtained from simulated crowd annotators. This is of interest, as it shows performance with noise comparable to what we would expect to collect in the wild. The worst performance is obtained when 50% of the labels are randomly flipped, and improves for cases in which the amount of noise is larger than 50%, as the model is able to exploit structure that is still present in the data, but produces poses that are flipped back to front.</p>
 
                   <li><h3 style=""><b>LSP</b></h3></li>
-                  <a href="./Figures/lsp_results.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"><img src="./Figures/lsp_results.png" alt="" width="100%"></a>
+                  <a href="/archive/ronchi_matteo/projects/RelativePose/Figures/lsp_results.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"><img src="/archive/ronchi_matteo/projects/RelativePose/Figures/lsp_results.png" alt="" width="100%"></a>
                   <p align="justify">The LSP dataset, unlike Human3.6M, does not contain ground truth 3D poses. As a result, we evaluate the models by measuring the percentage of relative labels incorrectly predicted compared to the annotations we collected via Mechanical Turk. The 3D supervised model and our relative model, with one comparison per input pose, trained on Human3.6M achieve test errors of 34.4% and 34.3% respectively. We are able to further reduce the error of our relative model to 24.1% by fine-tuning it using the ordinal annotations collected for the LSP training set. Furthermore, training our relative model from scratch using exclusively the LSP training set also outperforms the supervised baseline obtaining an error of 27.1%.</p>
 
                 </ul>
@@ -172,7 +180,7 @@
             <p align="justify">The Figures below contain example visualizations from the labels in the provided dataset: names and ordering of each pair of selected keypoints are written on top of their plot and the green keypoint is annotated to be closer to the camera compared to the red one. The confidence of the label in the bottom-right box determines the color of the connection between the keypoints.</p>
 
             <div class="cf">
-             <div><img src="./Figures/image_id_15.png" alt="" width="500px"></div> 
+             <div><img src="/archive/ronchi_matteo/projects/RelativePose/Figures/image_id_15.png" alt="" width="500px"></div> 
              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
              <div>
                <p align="justify">The <a href="#download"><b>Reltive Depth LSP Dataset</b></a> contains the following data:</p> 
@@ -191,7 +199,7 @@
             </div>
 
             <div class="cf">
-             <div><img src="./Figures/image_id_1894.png" alt="" width="500px"></div>
+             <div><img src="/archive/ronchi_matteo/projects/RelativePose/Figures/image_id_1894.png" alt="" width="500px"></div>
              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
              <div>
                <ul>
@@ -220,10 +228,10 @@
                     <a class="btn btn-large btn-primary" type="button" href="https://github.com/matteorr/rel_3d_pose" onclick="trackOutboundLink('https://github.com/matteorr/rel_3d_pose'); return true;" >
                         <b> GitHub Code </b>
                     </a>
-                    <a class="btn btn-large btn-primary" type="button" href="Dataset/relative_depth_lsp_v1.json.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Relative Depth LSP Dataset',this.href])">
+                    <a class="btn btn-large btn-primary" type="button" href="/archive/ronchi_matteo/projects/RelativePose/Dataset/relative_depth_lsp_v1.json.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Relative Depth LSP Dataset',this.href])">
                         <b> Relative Depth LSP Dataset </b>
                     </a>
-                    <a class="btn btn-large btn-primary" type="button" href="Outputs/bmvc_2018_output_poses.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Model Output Poses',this.href])">
+                    <a class="btn btn-large btn-primary" type="button" href="/archive/ronchi_matteo/projects/RelativePose/Outputs/bmvc_2018_output_poses.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Model Output Poses',this.href])">
                         <b> Output Poses </b>
                     </a>
                 </div>
@@ -251,10 +259,10 @@
                         M.R. Ronchi, O. Mac Aodha, R. Eng, and P. Perona<br>
                         Oral Presentation @ BMVC 2018.<br>
                         
-                        <a href="./Cite/BMVC18_RelativePose_BIBTEX" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Bibtex',this.href])">
+                        <a href="/archive/ronchi_matteo/projects/RelativePose/Cite/BMVC18_RelativePose_BIBTEX" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Bibtex',this.href])">
                             <span class="label_download">Bibtex</span>
                         </a>
-                        <a href="http://vision.caltech.edu/%7Emronchi/papers/BMVC18_Relative3DPose_PAPER.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Main Paper PDF',this.href])">
+                        <a href="/archive/ronchi_matteo/papers/BMVC18_Relative3DPose_PAPER.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Main Paper PDF',this.href])">
                             <span class="label_download">Paper</span>
                         </a>
                         
