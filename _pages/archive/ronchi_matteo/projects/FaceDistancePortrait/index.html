@@ -1,3 +1,11 @@
+---
+title: "Perona Lab - Home"
+layout: null
+excerpt: "Perona Lab"
+sitemap: false
+permalink: /~mronchi/projects/FaceDistancePortrait
+---
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -14,12 +22,12 @@
         <meta name="author" content="Matteo Ruggero Ronchi">
         <meta name="keywords" content="Xavier P. Burgos-Artizzu, Matteo Ruggero Ronchi, Pietro Perona, distance estimation, Faces, camera subject distance, perspective distortion, CMDP, caltech">
         <!-- Icon -->
-        <link rel="icon" href="./assets/icon/caltech_transparent.png">
+        <link rel="icon" href="/archive/ronchi_matteo/assets/icon/caltech_transparent.png">
             
         <!-- Bootstrap core CSS -->
-        <link href="./assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/archive/ronchi_matteo/assets/css/bootstrap.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="./assets/theme/navbar.css" rel="stylesheet">
+        <link href="/archive/ronchi_matteo/assets/theme/navbar.css" rel="stylesheet">
                                         
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -51,7 +59,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="http://www.caltech.edu"><img src="./assets/icon/caltech_transparent.png" height="50px" /></a>
+                        <a class="navbar-brand" href="http://www.caltech.edu"><img src="/archive/ronchi_matteo/assets/icon/caltech_transparent.png" height="50px" /></a>
                     </div>
                     
                     <!-- Static navbar BODY -->
@@ -106,8 +114,8 @@
                 <p align="justify">Consider a standard portrait of a person – either painted or photographed. Can one estimate the distance between the camera (or the eye of the painter) and the face of the sitter? Can one do so accurately even when the camera and the sitter are unknown?
                 </p>
   
-                <a href="./Figures/facesMontage.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
-                    <img src="./Figures/facesMontage.png" alt="" height="150">
+                <a href="/archive/ronchi_matteo/projects/FaceDistancePortrait/Figures/facesMontage.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                    <img src="/archive/ronchi_matteo/projects/FaceDistancePortrait/Figures/facesMontage.png" alt="" height="150">
                 </a>
             
                 <p align="justify">
@@ -157,7 +165,7 @@
                     <li><h3 style=""><b>REORDERING TASK</b></h3></li>
                 
                     <div class="cf">
-                        <div> <img src="./Figures/classification_results.png" width="350px" /> </div>
+                        <div> <img src="/archive/ronchi_matteo/projects/FaceDistancePortrait/Figures/classification_results.png" width="350px" /> </div>
                         <div><p align="justify">We show the results obtained by three variants of our method and by humans asked to perform the exact same task of sorting a random permutation of all 7 pictures of a subject based on their conveyed distance. The ground-truth landmarks based variant (<b>MANUAL</b>) outperforms human performance by 16%, while the automatic based ones (<b>RCPR-CMDP</b> and <b>RCPR-300F</b>) are slightly behind by 3% and 25% respectively. Closer faces appear to be much easier to classify than distant ones because of their unusual and disproportioned geometry. This has been confirmed by the human subjects of the study, stating their difficulty in telling apart images in the middle distance-range. Our best variant outperforms human capabilities in the classification task, correctly reordering an average of 81% of the faces when random chance is merely 15%. The same method using machine estimated landmarks still classifies correctly 62% of the images, and could very likely be improved just by increasing the availability of training examples.</p>
                         </div>
                     </div>
@@ -165,7 +173,7 @@
                     <li><h3 style=""><b>REGRESSION TASK</b></h3></li>
                 
                     <div class="cf">
-                        <div> <img src="./Figures/regression_results.png" width="350px" /> </div>
+                        <div> <img src="/archive/ronchi_matteo/projects/FaceDistancePortrait/Figures/regression_results.png" width="350px" /> </div>
                         <div><p align="justify">There is a strong correlation between ground-truth distances and predictions of our method. <b>MANUAL</b> achieves 75% correlation with a coefficient of determination of R2 = .5, while <b>RCPR-CMDP</b> and <b>RCPR-300F</b> achieve 65% and 45% correlation and R2 = .48 and .46 respectively. All variants seem to struggle more with the larger distances, as noticeable from the higher variance and greater distance to ground truth. This is an expected result considering the lower effect of perspective differences between two images taken from afar. As expected, directly estimating the distance of an unknown face proved to be a harder task. Nonetheless, a correlation of 75% with ground-truth indicates that the method is learning well.</p>
                         </div>
                     </div>
@@ -174,11 +182,11 @@
                     
                         <p align="justify">We measured how well each landmark group (head contour, face contour, eyes, nose, mouth) compares to best performance when only that particular group is used. For both <b>MANUAL</b> and <b>RCPR-CMDP</b>, in the classification task, best results are achieved using the head contour and the nose, while the eyes seem to be the least useful.</p>
                     
-                        <div> <img src="./Figures/classification_phys.png" width="350px" /> </div>
+                        <div> <img src="/archive/ronchi_matteo/projects/FaceDistancePortrait/Figures/classification_phys.png" width="350px" /> </div>
                         
                         <p align="justify">Also in the regression task, for both <b>MANUAL</b> and <b>RCPR-CMDP</b>, the most discriminative landmark group is the nose.</p>
                         
-                        <div> <img src="./Figures/regression_phys.png" width="350px" /> </div>
+                        <div> <img src="/archive/ronchi_matteo/projects/FaceDistancePortrait/Figures/regression_phys.png" width="350px" /> </div>
                         
                         <p align="justify">Discriminative power on these tasks is quantified as how well the method performed when incorporating those input landmarks into the learning. These findings agree with human annotators, which consistently reported during their psychophysics experiments that the use of the deformation in a subject’s nose was the most informative visual cue.</p>
 
@@ -196,10 +204,10 @@
                 
                 <div class="cf">
                     <div>
-                        <img src="./Figures/CMDP_diversity.png" alt="" width="100%">
+                        <img src="/archive/ronchi_matteo/projects/FaceDistancePortrait/Figures/CMDP_diversity.png" alt="" width="100%">
                     </div>
                     <div>
-                        <a href="./Figures/CMDP_montage.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"> <img src="./Figures/CMDP_montage.png" alt="" width="100%">
+                        <a href="/archive/ronchi_matteo/projects/FaceDistancePortrait/Figures/CMDP_montage.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image"> <img src="/archive/ronchi_matteo/projects/FaceDistancePortrait/Figures/CMDP_montage.png" alt="" width="100%">
                         </a>
                     </div>
                 </div>
@@ -221,16 +229,16 @@
                 <!--<p><b><font color="red">Downloads Temporarily Unavailable, please email me for info.</font></b></p>-->
                 
                 <div class="row text-center">
-                    <a class="btn btn-large btn-primary" type="button" href="Code/DISTANCE-ESTIMATION-DEMO.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CODE',this.href])">
+                    <a class="btn btn-large btn-primary" type="button" href="/archive/ronchi_matteo/projects/FaceDistancePortrait/Code/DISTANCE-ESTIMATION-DEMO.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CODE',this.href])">
                         <b> Code </b>
                     </a>
-                    <a class="btn btn-large btn-primary" type="button" href="Dataset/CMDP_v2/CMDP_1.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CMDP Dataset - Part 1',this.href])">
+                    <a class="btn btn-large btn-primary" type="button" href="https://data.caltech.edu/tindfiles/serve/11d1f564-8dd0-4661-abf1-824718ccc6de/" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CMDP Dataset - Part 1',this.href])">
                         <b>CMDP Dataset - Part 1</b>
                     </a>
-                    <a class="btn btn-large btn-primary" type="button" href="Dataset/CMDP_v2/CMDP_2.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CMDP Dataset - Part 2',this.href])">
+                    <a class="btn btn-large btn-primary" type="button" href="https://data.caltech.edu/tindfiles/serve/13a0a000-0977-4cfe-ab5a-ee79096dbb47/" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CMDP Dataset - Part 2',this.href])">
                         <b>CMDP Dataset - Part 2</b>
                     </a>
-                    <a class="btn btn-large btn-primary" type="button" href="Dataset/CMDP_v2/CMDP-ANNO.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CMDP Dataset Annotations',this.href])">
+                    <a class="btn btn-large btn-primary" type="button" href="https://data.caltech.edu/tindfiles/serve/62e34c2e-0fa6-4625-930b-0e07d5bb536d/" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CMDP Dataset Annotations',this.href])">
                         <b>CMDP Annotations</b>
                     </a>
                 </div>
@@ -260,16 +268,16 @@
                         
                         ECCV 2014, Zurich, Switzerland, September 2014. <br>
                         
-                        <a href="./Cite/ECCV14_FacesDistancePortrait_BIBTEX" target="_blank">
+                        <a href="/archive/ronchi_matteo/projects/FaceDistancePortrait/Cite/ECCV14_FacesDistancePortrait_BIBTEX" target="_blank">
                             <span class="label_download">Bibtex</span>
                         </a>
-                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ECCV14_FaceDistancePortrait_PAPER.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Paper PDF',this.href])">
+                        <a href="/archive/ronchi_matteo/papers/ECCV14_FaceDistancePortrait_PAPER.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Paper PDF',this.href])">
                             <span class="label_download">PDF</span>
                         </a>
-                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ECCV14_FaceDistancePortrait_SUPP.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Supp Mat PDF',this.href])">
+                        <a href="/archive/ronchi_matteo/papers/ECCV14_FaceDistancePortrait_SUPP.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Supp Mat PDF',this.href])">
                             <span class="label_download">Supp Mat</span>
                         </a>
-                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ECCV14_FaceDistancePortrait_POSTER.pdf" target="'_blank" onclick="_gaq.push(['_trackEvent','Download','Poster PDF',this.href])">
+                        <a href="/archive/ronchi_matteo/papers/ECCV14_FaceDistancePortrait_POSTER.pdf" target="'_blank" onclick="_gaq.push(['_trackEvent','Download','Poster PDF',this.href])">
                             <span class="label_download">Poster</span>
                         </a>
                         
