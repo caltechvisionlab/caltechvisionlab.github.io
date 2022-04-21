@@ -1,3 +1,11 @@
+---
+title: "Perona Lab - Home"
+layout: null
+excerpt: "Perona Lab"
+sitemap: false
+permalink: /~mronchi/projects/RotationInvariantMovemes/
+---
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -14,12 +22,12 @@
         <meta name="author" content="Matteo Ruggero Ronchi">
         <meta name="keywords" content=" Matteo Ruggero Ronchi, Joon Sik Kim, Yisong Yue, caltech">
         <!-- Icon -->
-        <link rel="icon" href="./assets/icon/caltech_transparent.png">
+        <link rel="icon" href="/archive/ronchi_matteo/assets/icon/caltech_transparent.png">
             
         <!-- Bootstrap core CSS -->
-        <link href="./assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/archive/ronchi_matteo/assets/css/bootstrap.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="./assets/theme/navbar.css" rel="stylesheet">
+        <link href="/archive/ronchi_matteo/assets/theme/navbar.css" rel="stylesheet">
 
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -76,7 +84,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="http://www.caltech.edu"><img src="./assets/icon/caltech_transparent.png" height="50px" /></a>
+                        <a class="navbar-brand" href="http://www.caltech.edu"><img src="/archive/ronchi_matteo/assets/icon/caltech_transparent.png" height="50px" /></a>
                     </div>
                     
                     <!-- Static navbar BODY -->
@@ -169,26 +177,26 @@
                 <ul>
                     <li><h3 style=""><b>Activity Recognition</b></h3></li>
                 
-                        <div> <img src="./Figures/activity_recognition.png" width="100%" /> </div>
+                        <div> <img src="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Figures/activity_recognition.png" width="100%" /> </div>
                         <p align="justify">
                         We show the results obtained from five fold cross validation. The proposed 3-D latent factor model (<i>lfa3d</i>) outperforms all other methods by an average accuracy of about 11%. The 2-D model (<i>lfa2d</i>) performs slightly worse than the clustered SVD baseline (<i>svd+rot</i>), but both show more than a 5% average improvement over the <i>svd</i> baseline.</p>
                         <p align="justify"> The two most challenging activities are <i>athletics</i>, which does not posses characterizing movements; and <i>tennis</i>, whose movemes are shared and thus confused with multiple other sports, <i>badminton</i> and <i>baseball</i> above all.<p>  
                 
                     <li><h3 style=""><b>Action Dynamics Inference</b></h3></li>
                 
-                        <div> <img src="./Figures/dynamics_inference.png" width="100%" /> </div>
+                        <div> <img src="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Figures/dynamics_inference.png" width="100%" /> </div>
                         <p align="justify">
                         In this experiment, we shuffled 1000 sequences of four images for four sport actions (<i>baseball pitch</i>, <i>tennis forehand</i>, <i>tennis serve</i>, <i>baseball swing</i>), and verified how precisely could the underlying chronological sequence be recovered. The analysis is repeated five times to obtain standard deviations, and performance is measured in terms of three metrics (shown in the figure): (1) what percentage of the 1000 sequences is exactly reordered; (2) how many poses are wrongly positioned; and (3) how bad are the reordering mistakes, computed as the number of swaps necessary to correct a sequence. We also plot the per-position accuracy in each sport for all methods.
                         </p>
                         <p align="justify">The <i>lfa3d</i> model has significantly better outcomes compared to <i>lfa2d</i> and <i>svd</i>, which perform similarly. Specifically, <i>lfa3d</i> correctly reorders more than twice the sequences overall (1314 against 555 of <i>lfa2d</i>) averages 1.6 errors, and is the only algorithm to require an average number of swaps smaller than 1.</p>
                     
                     <li><h3 style=""><b>Moveme Visualization</b></h3></li>
-                        <div><img src="./Figures/learned_movemes_representation.png" width="100%"/></div>
+                        <div><img src="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Figures/learned_movemes_representation.png" width="100%"/></div>
                            <p align="justify">The most significant movemes contained in the training set are captured by the basis pose matrix <b>U</b> and encoded in the form of a displacement from the mean pose. Each column of <b>U</b> corresponds to a latent factor that describes some of the movement variability present in the data.</p>
                            <p align="justify">We report the motion described by three latent factors: the rows show the pose obtained by adding an increasing portion of the learned moveme (from 30% - second column, to 100% - last column) to the mean pose of the data (first column). Two are easily interpretable, <i>soccer kick</i> and <i>tennis forehand</i>, while one is not as well defined, <i>volleyball strike / tennis serve</i>. The movemes differentiate very quickly, as early as 50% of the final movement is added.</p>
                      <li><h3 style=""><b>Initialization Sensitivity</b></h3></li> 
                         <div class="cf">
-                          <div> <img src="./Figures/initialization_sensitivity_angle_recovery.png" width="400px" /> </div>
+                          <div> <img src="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Figures/initialization_sensitivity_angle_recovery.png" width="400px" /> </div>
                           <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                           <div>
                            <p align="justify">The <i>lfa3d</i> method learns a rotation invariant representation by treating the angle of view of each pose as a variable which is optimized through gradient descent, and requires an initial guess for each training instance. We investigate how sensitive is the model to initialization, and how close is the recovered angle of view to the ground truth.</p>
@@ -199,10 +207,10 @@
                      
                  <li><h3 style=""><b>Manifold Visualization</b></h3></li>
 
-                        <div> <img src="./Figures/tsne.png" width="100%" /> </div>
+                        <div> <img src="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Figures/tsne.png" width="100%" /> </div>
                          <p align="justify">Each pose in LSP is mapped in the human motion space through the coefficients of the corresponding column of <b>V</b> learned with the <i>lfa3d</i> method, and then projected in two-dimensions using t-SNE. Poses describing similar movements are mapped to nearby positions and form consistent clusters, whose relative distance depends on which latent factors are used to reconstruct the contained poses. Upper body movements are mapped closely in the lower right corner, while lower body movements appear at the opposite end of the embedding. The mapping in the manifold is not affected by the direction each pose is facing, as nearby elements may have very different angle of view, confirming that the learned representation is rotation invariant.</p>
                          <div class="cf">
-                           <div> <img src="./Figures/tsne_heatmaps.png" width="350px" /> </div>
+                           <div> <img src="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Figures/tsne_heatmaps.png" width="350px" /> </div>
                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                            <div>
                              <p align="justify">The heatmaps obtained from the activations of two latent factors (<i>soccer kick</i> and <i>volleyball strike</i>), overlaid on top of the t-SNE mapping are shown in the Figure on the left. Clearly, the epicentrum of the <i>volleyball strike</i> basis pose is located where volleyball-like poses appear in the t-SNE plot (lower-right corner). Conversly, the <i>soccer kick</i> basis pose is mostly dominant in the top-left area and the heatmap is diffused, consistent with the observation that most poses contain some movement of the legs.</p>
@@ -217,14 +225,14 @@
             <h2 style=""><b>Comprehensive LSP (CO_LSP) Dataset</b></h2>
                 <p align="justify">We extended the LSP dataset, providing additional annotations of the angle of view each depicted subject is facing. We also include the 3D keypoint locations of the 14 joints of the human body, obtained by runnnig an off-the-shelf method for 2D to 3D pose estimation algorithm [2], along with the 2D annotations from the original LSP dataset [1]. We redistribute these comprehensive annotations in JSON format as the Comprehensive LSP (<b>CO_LSP</b>) Dataset, along with a <a href="#download">Python API</a> to load, manipulate and visualize the annotations.</p>
                 <div class="cf">
-                  <div> <img src="./Figures/example_gui.png" width="350px" /> </div>
+                  <div> <img src="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Figures/example_gui.png" width="350px" /> </div>
                   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                   <div>
                   <p align="justify">We collected high-quality viewing angle annotations for each pose in LSP. Although these annotations are not necessary for training, we used them to demonstrate the robustness of our model to poor angle initialization, and that it can in fact recover the ground truth value. Three annotators evaluated each image and were instructed to provide the direction at which the torso of the depicted subject was facing through the GUI visible in Figure. The standard deviation in the reported angle of view averaged over the whole dataset is 12 degrees, and more than half of the images have a deviation of less than 10 degrees, showing a very high annotator agreement for the task.</p>
                   </div>
                  </div>
                 <p align="justify">Example visualization for an annotation in the dataset:</p>
-                <div> <img src="./Figures/sample_show_anns.png" width="100%" /> </div>
+                <div> <img src="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Figures/sample_show_anns.png" width="100%" /> </div>
                 Notes:
                 <ul>
                     <li>Dataset Version [1.0]: 2000 images with corresponding 2d and 3d keypoint locations for 14 joints of the human body, activity and angle of view annotations.</li>
@@ -245,7 +253,7 @@
                     <a class="btn btn-large btn-primary" type="button" href="https://github.com/matteorr/rotation_invariant_movemes" onclick="trackOutboundLink('https://github.com/matteorr/rotation_invariant_movemes'); return false;">
                         <b> GitHub Code & CO_LSP API </b>
                     </a>
-                    <a class="btn btn-large btn-primary" type="button" href="Dataset/CO_LSP_train2016.json.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CO_LSP Dataset',this.href])">
+                    <a class="btn btn-large btn-primary" type="button" href="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Dataset/CO_LSP_train2016.json.zip" target="_blank" onclick="_gaq.push(['_trackEvent','Download','CO_LSP Dataset',this.href])">
                         <b> CO_LSP Dataset </b>
                     </a>
                 </div>
@@ -271,19 +279,19 @@
                         
                         ICDM 2016, Barcelona, Spain, December 2016.<br>
                         
-                        <a href="./Cite/ICDM16_RotationInvariantMovemeDiscovery_BIBTEX" target="_blank">
+                        <a href="/archive/ronchi_matteo/projects/RotationInvariantMovemes/Cite/ICDM16_RotationInvariantMovemeDiscovery_BIBTEX" target="_blank">
                             <span class="label_download">Bibtex</span>
                         </a>
-                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ICDM16_RotationInvariantMovemeDiscovery_PAPER_LONG.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Long Paper PDF',this.href])">
+                        <a href="/archive/ronchi_matteo/papers/ICDM16_RotationInvariantMovemeDiscovery_PAPER_LONG.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Long Paper PDF',this.href])">
                             <span class="label_download">Long Paper</span>
                         </a>
-                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ICDM16_RotationInvariantMovemeDiscovery_PAPER_SHORT.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Short Paper PDF',this.href])">
+                        <a href="/archive/ronchi_matteo/papers/ICDM16_RotationInvariantMovemeDiscovery_PAPER_SHORT.pdf" target="_blank" onclick="_gaq.push(['_trackEvent','Download','Short Paper PDF',this.href])">
                             <span class="label_download">Short Paper</span>
                         </a>
-                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ICDM16_RotationInvariantMovemeDiscovery_POSTER.pdf" target="'_blank" onclick="_gaq.push(['_trackEvent','Download','Poster',this.href])">
+                        <a href="/archive/ronchi_matteo/papers/ICDM16_RotationInvariantMovemeDiscovery_POSTER.pdf" target="'_blank" onclick="_gaq.push(['_trackEvent','Download','Poster',this.href])">
                             <span class="label_download">Poster</span>
                         </a>
-                        <a href="http://vision.caltech.edu/%7Emronchi/papers/ICDM16_RotationInvariantMovemeDiscovery_PRESENTATION.pdf" target="'_blank" onclick="_gaq.push(['_trackEvent','Download','Presentation',this.href])">
+                        <a href="/archive/ronchi_matteo/papers/ICDM16_RotationInvariantMovemeDiscovery_PRESENTATION.pdf" target="'_blank" onclick="_gaq.push(['_trackEvent','Download','Presentation',this.href])">
                             <span class="label_download">Presentation</span>
                         </a>
                         
