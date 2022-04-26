@@ -6,10 +6,11 @@ sitemap: false
 permalink: /datasets/caltech_10k_webfaces/
 ---
 
+<h1 align="center">
+  <b>Caltech 10k Web Faces</b>
+</h1>
+
 <p align="center">
-  <h1>
-    <b>Caltech 10k Web Faces</b>
-  </h1>
   <img width="353" height="400" src="/assets/datasets/caltech_10k_web_faces/WebFaces.jpg">
 </p>
 
