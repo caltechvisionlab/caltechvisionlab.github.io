@@ -3,17 +3,14 @@ title: "Perona Lab - Caltech 10k Web Faces"
 layout: textlay
 excerpt: "Perona Lab -- Caltech 10k Web Faces"
 sitemap: false
-permalink: /datasets/Caltech_10K_WebFaces/
+permalink: /datasets/caltech_10k_webfaces/
 ---
 
-# Caltech 10k Web Faces
-
-<h1>
-    <b>Caltech 10k Web Faces</b>
-</h1>
-
 <p align="center">
-  <img width="706" height="801" src="/assets/datasets/caltech_10k_web_faces/WebFaces.jpg">
+  <h1>
+    <b>Caltech 10k Web Faces</b>
+  </h1>
+  <img width="353" height="400" src="/assets/datasets/caltech_10k_web_faces/WebFaces.jpg">
 </p>
 
 ## Description
