@@ -18,6 +18,7 @@ As of April 2022, our current status is as follows:
 ## Project Pages for Datasets
 * [CUB-200-2011](/datasets/cub_200_2011/)
 * [Caltech Camera Traps](https://lila.science/datasets/caltech-camera-traps)
+* [Caltech 10k Web Faces](/datasets/caltech_10k_webfaces/)
 
 ## Other Datasets
 * [Caltech 101](https://data.caltech.edu/records/20086)
