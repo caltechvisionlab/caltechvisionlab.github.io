@@ -19,6 +19,7 @@ As of April 2022, our current status is as follows:
 * [CUB-200-2011](/datasets/cub_200_2011/)
 * [Caltech Camera Traps](https://lila.science/datasets/caltech-camera-traps)
 * [Caltech 10k Web Faces](/datasets/caltech_10k_webfaces/)
+* [Caltech Mouse Social Interaction Dataset 2021 (CalMS21)](https://sites.google.com/view/computational-behavior/our-datasets/calms21-dataset)
 
 ## Other Datasets
 * [Caltech 101](https://data.caltech.edu/records/20086)
@@ -26,8 +27,10 @@ As of April 2022, our current status is as follows:
 * [Cars 1999](https://data.caltech.edu/records/20084)
 * [Cars 2001](https://data.caltech.edu/records/20085)
 * [COCO-a](https://data.caltech.edu/records/20109)
+* [Fly vs. Fly](https://data.caltech.edu/records/1893)
 * [Home Objects 2006](https://data.caltech.edu/records/20089)
 * [Motorcycles 2001](https://data.caltech.edu/records/20088)
 * [Caltech Multi-Distance Portraits (CMDP)](https://data.caltech.edu/records/20110)
 * [Occluded Faces in the Wild](https://data.caltech.edu/records/20099)
 * [Relative Depth LSP](https://data.caltech.edu/records/20096)
+* [Caltech Resident-Intruder Mouse 13 (CRIM13)](https://data.caltech.edu/records/1892)
