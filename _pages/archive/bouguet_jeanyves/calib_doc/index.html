@@ -18,7 +18,7 @@ base: /_pages/archive/bouguet_jeanyves/calib_doc/
 
 <!--
 function getDownload(){
-        window.open("download/index.html","InfoPopUp","width=900,height=160");
+        window.open("{{ page.base }}download/index.html","InfoPopUp","width=900,height=160");
         }
 // -->
 
@@ -120,12 +120,12 @@ The C implementation of this toolbox is included in <a href="http://docs.opencv.
 <li><a href="#system">System requirements</a></li>
 <li><a href="#start">Getting started</a></li>
 <li><a href="#examples">Calibration examples</a></li>
-<li><a href="htmls/parameters.html">Description of the calibration parameters</a></li>
-<li><a href="htmls/functions.html">Description of the functions in the calibration toolbox</a></li>
-<li><a href="htmls/own_calib.html">Doing your own calibration</a></li>
-<li><a href="htmls/updates.html">Undocumented features of the toolbox</a></li>
-<li><a href="htmls/ref.html">References</a></li>
-<li><a href="htmls/links.html">A few links related to camera calibration</a></li>
+<li><a href="{{ page.base }}htmls/parameters.html">Description of the calibration parameters</a></li>
+<li><a href="{{ page.base }}htmls/functions.html">Description of the functions in the calibration toolbox</a></li>
+<li><a href="{{ page.base }}htmls/own_calib.html">Doing your own calibration</a></li>
+<li><a href="{{ page.base }}htmls/updates.html">Undocumented features of the toolbox</a></li>
+<li><a href="{{ page.base }}htmls/ref.html">References</a></li>
+<li><a href="{{ page.base }}htmls/links.html">A few links related to camera calibration</a></li>
 </ul>
 </td>
 </tr>
@@ -139,12 +139,12 @@ The C implementation of this toolbox is included in <a href="http://docs.opencv.
 <BR>
 
 <a name="system"></a>
-<H2><IMG SRC="gifs/starroll.gif"> System requirements</H2>
+<H2><IMG SRC="{{ page.base }}gifs/starroll.gif"> System requirements</H2>
 
 This toolbox works on Matlab 5.x to Matlab 8.x on Windows, Unix and Linux systems and does not require any specific Matlab toolbox (for example, the optimization toolbox is not required). <BR>
 <b>Note: </b>Please help me maintaining this toolbox by reporting them to me. Include in the email subject the type of the bug, and copy in the body the complete error message. Thank you!
 <a name="start"></a>
-<H2><IMG SRC="gifs/starroll.gif"> Getting started</H2>
+<H2><IMG SRC="{{ page.base }}gifs/starroll.gif"> Getting started</H2>
 
 <ul>
 
@@ -163,7 +163,7 @@ the command <B>path</B> or <b>addpath</b> (use the <B>help</B> command for funct
 A mode selection window appears on the screen:
 
 <BR><BR>
-<center><IMG SRC="gifs/mode_selection.gif"></center><BR>
+<center><IMG SRC="{{ page.base }}gifs/mode_selection.gif"></center><BR>
 
 This selection window lets you choose between two modes of operation of the toolbox: standard or memory efficient. In standard mode, all the images used for calibration are loaded into memory once and never read again from disk. This minimizes the overall number of disk access, and speeds up all image processing and image display functions. However, if the images are large, or there are a lot of them, then the <B>OUT OF MEMORY</B> error message may be encountered. If this is the case, the new memory efficient version of the toolbox may be used. In this mode, every image is loaded one by one and never stored permanently in memory.
 <BR>
@@ -174,7 +174,7 @@ If you choose to run the standard version of the toolbox now, you can always swi
 Since both modes have the exact same user interface, in the context of this documentation, let us select the standard mode by clicking on the top button of the window. The main calibration toolbox window appears on the screen (replacing the mode selection window):
 
 <BR><BR>
-<center><IMG SRC="gifs/2D_calib.gif"></center>
+<center><IMG SRC="{{ page.base }}gifs/2D_calib.gif"></center>
 
 <BR>
 
@@ -192,11 +192,11 @@ Note that the mode selection step can be bypassed altogether by directly running
 <BR><BR>
 
 <a name="examples"></a>
-<H2><IMG SRC="gifs/starroll.gif"> Calibration examples </H2>
+<H2><IMG SRC="{{ page.base }}gifs/starroll.gif"> Calibration examples </H2>
 <UL>
 
 <li>
-<H3><a href="htmls/example.html">First calibration example - Corner extraction, calibration, additional tools</a> </H3>
+<H3><a href="{{ page.base }}htmls/example.html">First calibration example - Corner extraction, calibration, additional tools</a> </H3>
 
 This section takes you through a complete calibration example based on
 a total of 20 (and 25) images of a planar checkerboard. This example
@@ -211,7 +211,7 @@ recommended for someone who is just starting using the toolbox.
 <BR><BR>
 
 <li>
-<a name="example2"></a> <H3><a href="htmls/example2.html">Second calibration
+<a name="{{ page.base }}example2"></a> <H3><a href="{{ page.base }}htmls/example2.html">Second calibration
 example - Calibration using Zhengyou Zhang's data</a></H3>
 
 This section shows you how to use the main calibration engine on
@@ -225,7 +225,7 @@ in their own matlab script files.
 <BR><BR>
 
 <li>
-<a name="example3"></a> <H3><a href="htmls/example3.html">Third calibration
+<a name="example3"></a> <H3><a href="{{ page.base }}htmls/example3.html">Third calibration
 example - Calibration using Heikkil�'s data (planar and non-planar
 calibration rigs)</a></H3>
 
@@ -237,7 +237,7 @@ Try it, it takes only 30 seconds to run!
 <BR><BR>
 
 <li>
-<a name="example4"></a> <H3><a href="htmls/example4.html">Fourth calibration
+<a name="example4"></a> <H3><a href="{{ page.base }}htmls/example4.html">Fourth calibration
 example - Calibration using Bakstein and Halir's data</a></H3>
 
 Another similar calibration example that runs the main optimization
@@ -247,18 +247,18 @@ engine on Bakstein and Halir's data. Try it!
 <BR><BR>
 
 <li>
-<a name="example5"></a> <H3><a href="htmls/example5.html">Fifth calibration
+<a name="example5"></a> <H3><a href="{{ page.base }}htmls/example5.html">Fifth calibration
 example - Calibrating a stereo system, stereo image rectification and 3D stereo triangulation</a></H3>
 
 This example shows how to use the toolbox for calibrating a stereo system (intrinsically and extrinsically), rectifying stereo images, and performing 3D stereo triangulation. A new stereo toolbox called by <B>stereo_gui</B> is demonstrated.
 
 <BR><BR>
-<center><IMG SRC="gifs/stereo_gui.gif"></center>
+<center><IMG SRC="{{ page.base }}gifs/stereo_gui.gif"></center>
 
 <BR><BR>
 
 <li>
-<a name="example6"></a> <H3><a href="htmls/example6.html">Sixth calibration
+<a name="example6"></a> <H3><a href="{{ page.base }}htmls/example6.html">Sixth calibration
 example - Combining two independent calibrations of the same camera</a></H3>
 
 This example gives a quick demonstration of the script <B>merge_two_datasets.m</B> that lets you easily combine two calibration datasets of the same camera created independently.
@@ -272,7 +272,7 @@ This example gives a quick demonstration of the script <B>merge_two_datasets.m</
 
 
 <a name="parameters"></a>
-<H2><IMG SRC="gifs/starroll.gif"> <a href ="htmls/parameters.html">Description of the calibration parameters</a></H2>
+<H2><IMG SRC="{{ page.base }}gifs/starroll.gif"> <a href ="{{ page.base }}htmls/parameters.html">Description of the calibration parameters</a></H2>
 
 After calibration, the list of parameters may be stored in the matlab
 data file <b>Calib_Results.mat</b> by clicking on <b>Save</b>. This section
@@ -288,7 +288,7 @@ and <a href="http://www.ee.oulu.fi/~jth/calibr/">Heikkil�'s</a> and <a href="h
 
 
 <a name="functions"></a>
-<H2><IMG SRC="gifs/starroll.gif"> <a href ="htmls/functions.html">Description of the functions in the calibration toolbox</a></H2>
+<H2><IMG SRC="{{ page.base }}gifs/starroll.gif"> <a href ="{{ page.base }}htmls/functions.html">Description of the functions in the calibration toolbox</a></H2>
 
 This sections gives a short description of all the main functions in
 the calibration toolbox.
@@ -296,7 +296,7 @@ the calibration toolbox.
 <BR><BR><BR>
 
 <a name="own_calib"></a>
-<H2><IMG SRC="gifs/starroll.gif"> <a href ="htmls/own_calib.html">Doing your own calibration</a></H2>
+<H2><IMG SRC="{{ page.base }}gifs/starroll.gif"> <a href ="{{ page.base }}htmls/own_calib.html">Doing your own calibration</a></H2>
 
 This section contains some information regarding the initial steps of
 calibration: designing the calibration rig, naming the calibration
@@ -307,7 +307,7 @@ lazy ones, a calibration pattern is even provided!
 
 
 <a name="updates"></a>
-<H2><IMG SRC="gifs/starroll.gif"> <a href ="htmls/updates.html">Undocumented features of the toolbox</a></H2>
+<H2><IMG SRC="{{ page.base }}gifs/starroll.gif"> <a href ="{{ page.base }}htmls/updates.html">Undocumented features of the toolbox</a></H2>
 
 This section contains a list of features that have been added to the
 toolbox since the first release of the documentation.
@@ -316,7 +316,7 @@ toolbox since the first release of the documentation.
 <BR><BR><BR>
 
 <a name="ref"></a>
-<H2><IMG SRC="gifs/starroll.gif"> <a href ="htmls/ref.html">References</a></H2>
+<H2><IMG SRC="{{ page.base }}gifs/starroll.gif"> <a href ="{{ page.base }}htmls/ref.html">References</a></H2>
 
 A list of reference papers that were used to design that toolbox.
 
@@ -324,7 +324,7 @@ A list of reference papers that were used to design that toolbox.
 
 <a name="links"></a>
 
-<H2><IMG SRC="gifs/starroll.gif"> <a href ="htmls/links.html">A few links related to camera calibration</a></H2>
+<H2><IMG SRC="{{ page.base }}gifs/starroll.gif"> <a href ="{{ page.base }}htmls/links.html">A few links related to camera calibration</a></H2>
 
 A short list of links related to camera calibration.
 
@@ -337,7 +337,7 @@ A short list of links related to camera calibration.
 <!--
 <font size=+0>Number of visits since Oct. 1999: </font><img src="http://www.vision.caltech.edu/cgi-bin/nph-count?width=5&link=jyb_calib" > <BR> -->
 Jean-Yves Bouguet<BR>Last updated October 14<SUP>th</SUP>, 2015
-<P><FONT SIZE=+1><A HREF="../index.html">Back to main page</A></FONT>
+<P><FONT SIZE=+1><A HREF="https://www.vision.caltech.edu/bouguetj/calib_doc/">Back to main page</A></FONT>
 </P>
 
 <img src="http://www.prchecker.info/PR1_img.gif" alt="Page Rank Checker" border="0" />
