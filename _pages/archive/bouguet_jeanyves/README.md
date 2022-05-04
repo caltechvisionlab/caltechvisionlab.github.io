@@ -6,4 +6,4 @@ sitemap: false
 permalink: /bouguetj/calib_doc/
 ---
 
-# This page has been archived [here](https://data.caltech.edu/records/20164).
+**This page has been [archived](https://data.caltech.edu/records/20164).**
