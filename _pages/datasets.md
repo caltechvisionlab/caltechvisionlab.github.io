@@ -10,7 +10,7 @@ permalink: /datasets/
 
 Pardon our dust! We are in the process of transitioning our datasets to new hosting services. 
 
-As of April 2022, our current status is as follows:
+As of July 2022, our current status is as follows:
 * Some of our datasets are available [here](https://drive.google.com/drive/folders/1cnQHqa8BkVx90-6-UojHnbMB0WhksSRc?usp=sharing). 
 * Some of our datasets are listed below.
 * All other datasets are available by emailing Elijah Cole (ecole@caltech.edu). 
