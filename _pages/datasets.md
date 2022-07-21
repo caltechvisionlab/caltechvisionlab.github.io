@@ -28,6 +28,7 @@ As of July 2022, our current status is as follows:
 * [Cars 1999](https://data.caltech.edu/records/20084)
 * [Cars 2001](https://data.caltech.edu/records/20085)
 * [COCO-a](https://data.caltech.edu/records/20109)
+* [Caltech Face Dataset 1999](https://data.caltech.edu/records/20237)
 * [Fly vs. Fly](https://data.caltech.edu/records/1893)
 * [Home Objects 2006](https://data.caltech.edu/records/20089)
 * [Motorcycles 2001](https://data.caltech.edu/records/20088)
