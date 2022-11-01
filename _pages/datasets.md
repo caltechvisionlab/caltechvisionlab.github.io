@@ -34,5 +34,6 @@ As of July 2022, our current status is as follows:
 * [Motorcycles 2001](https://data.caltech.edu/records/20088)
 * [Caltech Multi-Distance Portraits (CMDP)](https://data.caltech.edu/records/20110)
 * [Caltech Occluded Faces in the Wild (COFW)](https://data.caltech.edu/records/20099)
+* [Pasadena Urban Trees / RegisTree](https://data.caltech.edu/records/pmyd7-zsf43)
 * [Relative Depth LSP](https://data.caltech.edu/records/20096)
 * [Caltech Resident-Intruder Mouse 13 (CRIM13)](https://data.caltech.edu/records/1892)
