@@ -30,6 +30,7 @@ As of July 2022, our current status is as follows:
 * [COCO-a](https://data.caltech.edu/records/20109)
 * [Caltech Face Dataset 1999](https://data.caltech.edu/records/20237)
 * [Fly vs. Fly](https://data.caltech.edu/records/1893)
+* [Giuseppe Toys](https://data.caltech.edu/records/geqpk-zzf16)
 * [Home Objects 2006](https://data.caltech.edu/records/20089)
 * [Motorcycles 2001](https://data.caltech.edu/records/20088)
 * [Caltech Multi-Distance Portraits (CMDP)](https://data.caltech.edu/records/20110)
