@@ -6,4 +6,4 @@ sitemap: false
 permalink: /Tools/FlyTracker/
 ---
 
-**This page has been [moved](https://github.com/kristinbranson/FlyTracker).**
+# This page has been [moved](https://github.com/kristinbranson/FlyTracker).
