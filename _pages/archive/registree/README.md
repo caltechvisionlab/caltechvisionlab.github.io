@@ -6,4 +6,4 @@ sitemap: false
 permalink: /registree/
 ---
 
-**This page has been [archived](https://data.caltech.edu/records/pmyd7-zsf43).**
+# This page has been [archived](https://data.caltech.edu/records/pmyd7-zsf43).
