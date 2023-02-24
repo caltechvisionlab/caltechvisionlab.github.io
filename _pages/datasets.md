@@ -13,7 +13,9 @@ Pardon our dust! We are in the process of transitioning our datasets to new host
 As of July 2022, our current status is as follows:
 * Some of our datasets are available [here](https://drive.google.com/drive/folders/1cnQHqa8BkVx90-6-UojHnbMB0WhksSRc?usp=sharing). 
 * Some of our datasets are listed below.
-* All other datasets are available by emailing Elijah Cole (ecole@caltech.edu). 
+* All other datasets are available by:
+  * (*Faster*) submitting an issue or a pull request [here](https://github.com/caltechvisionlab/caltechvisionlab.github.io) 
+  * (*Slower*) sending an email to Laure Deslisle (laure.delisle@caltech.edu), Rogério Guimarães (rogerio@caltech.edu), Suzanne Stathatos (sstathat@caltech.edu)
 
 ## Project Pages for Datasets
 * [CUB-200-2011](/datasets/cub_200_2011/)
