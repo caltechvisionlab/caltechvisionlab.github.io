@@ -12,4 +12,6 @@ We are interested in the computational foundations of vision. This knowledge hel
 
 **Interested in applying?** See our current [openings](/openings/). 
 
-**Can't find the code or data you're looking for?** (Faster) submit an issue or a pull request [here](https://github.com/caltechvisionlab/caltechvisionlab.github.io) or (Slower) send an email to Laure Deslisle (laure.delisle@caltech.edu), Rogério Guimarães (rogerio@caltech.edu), Suzanne Stathatos (sstathat@caltech.edu)
+**Can't find the code or data you're looking for?** 
+* (*Faster*) submit an issue or a pull request [here](https://github.com/caltechvisionlab/caltechvisionlab.github.io) 
+* (*Slower*) send an email to Laure Deslisle (laure.delisle@caltech.edu), Rogério Guimarães (rogerio@caltech.edu), Suzanne Stathatos (sstathat@caltech.edu)
