@@ -40,6 +40,7 @@ As of July 2022, our current status is as follows:
 * [Pasadena Urban Trees / RegisTree](https://data.caltech.edu/records/pmyd7-zsf43)
 * [Relative Depth LSP](https://data.caltech.edu/records/20096)
 * [Caltech Resident-Intruder Mouse 13 (CRIM13)](https://data.caltech.edu/records/1892)
+* [Caltech Pedestrians](https://data.caltech.edu/records/f6rph-90m20)
 
 # Code
 * [Camera Calibration Toolbox for Matlab](https://data.caltech.edu/records/jx9cx-fdh55)
