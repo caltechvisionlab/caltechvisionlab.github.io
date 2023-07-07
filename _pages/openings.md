@@ -18,4 +18,4 @@ If you are interested in joining the lab as a PhD student, the first step is to 
 
 ### Undergraduate Research Assistants
 
-If you are interested in an undergraduate research position in the lab, please send your CV to Caroline Murphy (caroline@caltech.edu). Our lab members often work with the [SURF](https://sfp.caltech.edu/undergraduate-research/programs/surf), [WAVE](https://sfp.caltech.edu/undergraduate-research/programs/wavefellows), and [FSRI](https://diversity.caltech.edu/programs-training/programs/freshman-summer-research-institute-fsri) programs.
+If you are interested in an undergraduate research position in the lab, please send your CV to Caroline Murphy (caroline@caltech.edu). Our lab members often work with the [SURF](https://sfp.caltech.edu/undergraduate-research/programs/surf), [WAVE](https://sfp.caltech.edu/undergraduate-research/programs/wavefellows), and [FSRI](https://diversity.caltech.edu/programs-training/programs/first-year-success-research-institute-fsri) programs.
