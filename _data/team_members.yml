@@ -1,8 +1,3 @@
-- name: <a href="https://elijahcole.me/">Elijah Cole</a>
-  photo: cole_elijah.jpg
-  info: PhD Student
-  number_educ: 0
- 
 - name: <a href="http://lauredelisle.com/">Laure Delisle</a>
   photo: delisle_laure.jpg
   info: PhD Student
@@ -35,11 +30,6 @@
 
 - name: <a href="https://nkondapa.github.io/">Neehar Kondapaneni</a>
   photo: kondapaneni_neehar.jpeg
-  info: PhD Student
-  number_educ: 0
-
-- name: <a href="http://jenjsun.com/">Jennifer Sun</a>
-  photo: sun_jennifer.jpg
   info: PhD Student
   number_educ: 0
 
