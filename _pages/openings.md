@@ -8,11 +8,19 @@ permalink: /openings/
 
 # Open positions
 
-### Post-Doctoral Researchers
+### Opening: Post-doctoral fellow in Computer Vision for Ecology at Caltech
 
-If you are interested in a post-doctoral position in the lab, please send your CV to Caroline Murphy (caroline@caltech.edu).  
+Professors Gkioxari and Perona at the California Institute of Technology are seeking a Post-Doctoral Fellow in Computer Vision. The initial appointment is for one year renewable yearly for up to three years.  
 
-We are currently recruiting for a Post-doctoral Fellow to lead the science team in a project titled "Counting migrating salmon in the Pacific Northwest". The goal of the project is to develop and deploy state-of-the-art Computer Vision and Machine Learning system to detect and count every salmon migrating upstream in Pacific Northwest rivers from video. We will be pushing the envelope of what Computer Vision can accomplish in detection, counting and tracking -- the main challenges are domain adaptation and self-supervised learning.  Our goal is both to deliver a working system to count salmon and, more long-term, to develop a general-purpose animal detector and counter, which ecologists and conservationists around the world will want to use for their field studies. The project is led by four PIs: Pietro Perona (Caltech), Georgia Gkioxari (Caltech), Sara Beery (MIT) and Grant van Horn (U. Mass) who collaborate in the broad area of "AI for Ecology and Conservation". The post-doc will develop a technical approach in collaboration with the PIs and co-mentor a team of four graduate students working on the project. The post-doc will also manage a software engineer to help with building the system. The post-doc will also interact with users of the system: NOAA and the Alaska department of Fish and Game to understand how to best deliver the technology to them. The initial appointment is for one year and it is renewable for up to two additional years. To be considered for this position, please indicate "Salmon Project" in your cover letter.
+The post-doctoral fellow will be the lead scientist for a project that applies Computer Vision to Ecology and Conservation. The goal of the project is counting salmon traveling upstream in rivers of the Pacific Northwest from underwater ultrasound video that is collected by government and tribal agencies at thirty river locations across  Alaska, Washington, Oregon and California.  Success in the project will have immediate impact in management and conservation of salmon fisheries in the Pacific Northwest, where salmon is a key component of the economy, ecology and culture. The long-term scope of the project includes applications of Computer Vision to Ecology where animals are to be detected, counted, and classified with minimal prior training of the system. Thus, the long-term impact is improving and expanding data collection for Ecology and Conservation efforts worldwide.
+
+The project pushes the envelope of Computer Vision and Machine Learning in a number of directions. The system will need to detect and count animals accurately at new locations beyond the training sites, and in the face of changing environmental conditions.  It will also need to classify the species of each animal according to visual appearance  and behavior. Thus developing methods for self-supervised learning, domain adaptation and fine-grained classification in video will be priorities for the technical approach.
+
+The post-doc will report to Professors Pietro Perona and Georgia Gkioxari and will be responsible for the scientific and engineering success of the project. The post-doc will co-advise two graduate students and will manage a software engineer. The project will also involve a team at MIT led by Sara Beery and a team at U. Mass Amherst led by Grant van Horn.
+
+Candidates will need to have completed a PhD in Computer Vision and Machine Learning at the moment of hiring. Preferred attributes are experience in visual classification, detection, and tracking, good collaboration skills, and a passion for ecology and conservation.
+
+Candidates who are interested in the position should send their application to Professor Perona (perona@caltech.edu) with CC to Ms. Caroline Murphy (caroline@caltech.edu). The application should include (a) a brief statement of interest in the position stating why the candidate is qualified, (b) an up-to-date CV, (c) a one-page description of research accomplishments, (d) the names and email of three references.
 
 
 
