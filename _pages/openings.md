@@ -10,7 +10,7 @@ permalink: /openings/
 
 ### Opening: Post-doctoral fellow in Computer Vision for Ecology at Caltech
 
-Professors Gkioxari and Perona at the California Institute of Technology are seeking a Post-Doctoral Fellow in Computer Vision. The initial appointment is for one year renewable yearly for up to three years.  
+Professors Gkioxari and Perona at the California Institute of Technology are seeking a Post-Doctoral Fellow in Computer Vision. The initial appointment is for one year, renewable yearly for up to three years.  
 
 The post-doctoral fellow will be the lead scientist for a project that applies Computer Vision to Ecology and Conservation. The goal of the project is counting salmon traveling upstream in rivers of the Pacific Northwest from underwater ultrasound video that is collected by government and tribal agencies at thirty river locations across  Alaska, Washington, Oregon and California.  Success in the project will have immediate impact in management and conservation of salmon fisheries in the Pacific Northwest, where salmon is a key component of the economy, ecology and culture. The long-term scope of the project includes applications of Computer Vision to Ecology where animals are to be detected, counted, and classified with minimal prior training of the system. Thus, the long-term impact is improving and expanding data collection for Ecology and Conservation efforts worldwide.
 
