@@ -53,6 +53,11 @@
   info: Schmidt Scholar
   number_educ: 0
 
+- name: <a href="https://madivanhorn.github.io/">Madison Van Horn</a>
+  photo: vanhorn_madison.jpg
+  info: Machine Learning Engineer
+  number_educ: 0
+
 - name: Pietro Perona
   photo: perona_pietro.jpg
   info: Principal Investigator
