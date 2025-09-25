@@ -22,20 +22,10 @@
   photo: kang_raphi.jpg
   info: PhD Student
   number_educ: 0
-  
-- name: Mason McGill
-  photo: mcgill_mason.jpg
-  info: PhD Student
-  number_educ: 0
 
 - name: <a href="https://kvnjmle.com/">Kevin Le</a>
   photo: mei_kevin.jpeg
   info: PhD Student
-  number_educ: 0
-
-- name: <a href="https://damaggu.github.io/">Markus Marks</a>
-  photo: marks_markus.jpg
-  info: Postdoc
   number_educ: 0
 
 - name: <a href="https://kingjamessong.github.io/">Yue Song</a>
@@ -46,11 +36,6 @@
 - name: Caroline Murphy
   photo: murphy_caroline.jpg
   info: Group Administrator
-  number_educ: 0
-
-- name: <a href="https://nkondapa.github.io/">Neehar Kondapaneni</a>
-  photo: kondapaneni_neehar.jpeg
-  info: PhD Student
   number_educ: 0
 
 - name: <a href="https://suzanne-stathatos.github.io/">Suzanne Stathatos</a>
