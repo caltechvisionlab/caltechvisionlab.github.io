@@ -1,4 +1,9 @@
-- name: <a href="http://lauredelisle.com/">Laure Delisle</a>
+- name: <a href="http://https://www.sevanb.net/">Sevan Brodjian</a>
+  photo: brodjian_sevan.jpg
+  info: PhD Student
+  number_educ: 0
+  
+  - name: <a href="http://lauredelisle.com/">Laure Delisle</a>
   photo: delisle_laure.jpg
   info: PhD Student
   number_educ: 0
@@ -51,11 +56,6 @@
 - name: <a href="https://suzanne-stathatos.github.io/">Suzanne Stathatos</a>
   photo: stathatos_suzanne.jpeg
   info: PhD Student
-  number_educ: 0
-
-- name: <a href="https://www.linkedin.com/in/annayding/">Anna Ding</a>
-  photo: ding_anna.jpeg
-  info: Schmidt Scholar
   number_educ: 0
 
 - name: <a href="https://madivanhorn.github.io/">Madison Van Horn</a>
